@@ -16,7 +16,7 @@ const NavBar = () => {
   };
 
   return (
-    <nav className="bg-gray-200 shadow-md fixed w-full z-20 top-0 left-0">
+    <nav className="bg-gray-800 shadow-md fixed w-full z-20 top-0 left-0">
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Logo */}
         <div className="flex items-center">
@@ -34,14 +34,14 @@ const NavBar = () => {
         <ul className={`lg:flex lg:items-center ${isOpen ? 'block' : 'hidden'} w-full lg:w-auto`}>
           {/* About dropdown */}
           <li>
-            <a href="#home" className="py-2 px-4 text-gray-700 hover:text-blue-600">
+            <a href="#home" className="py-2 px-4 text-white hover:text-orange-400">
               Home
             </a>
           </li>
           <li className="relative group">
             <button
               onClick={() => toggleSubMenu('about')}
-              className="py-2 px-4 text-gray-700 hover:text-blue-600"
+              className="py-2 px-4 text-white hover:text-orange-400"
             >
               About
             </button>
@@ -65,7 +65,7 @@ const NavBar = () => {
           <li className="relative group">
             <button
               onClick={() => toggleSubMenu('programs')}
-              className="py-2 px-4 text-gray-700 hover:text-blue-600"
+              className="py-2 px-4 text-white hover:text-orange-400"
             >
               Programs
             </button>
@@ -122,7 +122,7 @@ const NavBar = () => {
 
           {/* Contact */}
           <li>
-            <a href="#contact" className="py-2 px-4 text-gray-700 hover:text-blue-600">
+            <a href="#contact" className="py-2 px-4 text-white hover:text-orange-400">
               Contact
             </a>
           </li>
