@@ -14,7 +14,7 @@ const Home = () => {
         },
         {
           image: 'https://c02.purpledshub.com/uploads/sites/41/2024/05/Earths-second-moon.jpg?w=1029&webp=1',
-          name: 'Daniel',
+          name: 'Kelvin.M',
           title: 'M.T.T. Alumni',
           testimonial: 'I got very relevant skills while i was at M.T.T. and i got a job placement 2months after completing the program.',
         },
