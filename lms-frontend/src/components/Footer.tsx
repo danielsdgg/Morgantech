@@ -65,9 +65,9 @@ const Footer: React.FC = () => {
           <div className="w-full md:w-1/3">
             <h2 className="text-xl font-bold">Contact Us</h2>
             <p className="text-gray-400 mt-4">
-              Email: contact@morgantech.com
+              Email: contact@morgantechnical72@gmail.com
               <br />
-              Phone: +254 700 000 000
+              Phone: +254 702 106 527
             </p>
           </div>
         </div>
