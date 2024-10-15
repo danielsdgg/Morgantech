@@ -74,6 +74,7 @@ const Footer: React.FC = () => {
             <h2 className="text-lg font-semibold mb-4">Our Location</h2>
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m13!1m8!1m3!1d15955.514256116314!2d36.66335915!3d-1.24359!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2ske!4v1728991489342!5m2!1sen!2ske"
+              title="Morgan Technical Training Location" // Added title property
               width="100%" 
               height="300" 
               style={{ border: 0 }} 
