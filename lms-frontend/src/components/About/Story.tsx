@@ -66,6 +66,10 @@ const Story: React.FC = () => {
             </div>
         </div>
       </section>
+      {/* 3 */}
+      <div className='w-full bg-gray-800 text-white py-24 px-2 text-center md:text-5xl sm:text-3xl text-3xl'>
+        <p>Begin your story with us today</p>
+        </div>
       <Footer />
     </>
   );

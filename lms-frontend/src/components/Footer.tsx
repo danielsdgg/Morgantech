@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
               <br />
               Phone: <span className="hover:text-gray-300 transition duration-300">+254 702 106 527</span>
               <br />
-              Location: <span className="hover:text-gray-300 transition duration-300">Kikuyu, May House: 1st Floor, Room 1c</span>
+              Location: <span className="hover:text-gray-300 transition duration-300">Kikuyu town, May House: 1st Floor, Room 1c</span>
             </p>
           </div>
 
