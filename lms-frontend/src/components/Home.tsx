@@ -173,11 +173,14 @@ const Home = () => {
   </div>
 
   {/* Right-faced arrow at bottom right */}
-  <div className="absolute bottom-0 right-0 p-8">
-    <NavLink to={'/courses'}> <p className="text-4xl text-gray-700 hover:text-blue-500 cursor-pointer">
-      &rarr;
-    </p> </NavLink>
-  </div>
+  <div className="absolute bottom-0 right-0 p-4">
+    <NavLink to={'/courses'}>
+    <p className="text-1xl text-gray-700 hover:text-blue-500 cursor-pointer font-semibold flex items-center">
+      See More <span className="ml-2 text-3xl">&rarr;</span>
+    </p>
+    </NavLink>
+    </div>
+
 </section>
 
 {/* part 4 */}
