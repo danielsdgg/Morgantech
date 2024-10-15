@@ -115,6 +115,17 @@ const Courses:React.FC = () => {
           Learn More
         </a>
       </div>
+      {/* feature 9 */}
+      <div className="bg-white p-6 rounded-lg shadow-lg text-center">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT2jJ_dSzID1UI-qDx2dxHj1GL3sdI8_MjHA&s" alt="Feature 1" className="mx-auto mb-4 h-16" /> {/* Replace with your icon */}
+        <h3 className="text-xl font-semibold mb-2">Web Design</h3>
+        <p className="text-gray-700">
+            A frontend developer is responsible for creating the visual and interactive aspects of a website or application. We train on languages like HTML, CSS, and JavaScript to build user interfaces, ensuring a seamless user experience. Their role includes collaborating with designers, optimizing performance, and ensuring compatibility across different devices and browsers.
+        </p>
+        <a href="#feature1" className="text-blue-500 hover:underline mt-4 block">
+          Learn More
+        </a>
+      </div>
     </div>
   </div>
 </section>

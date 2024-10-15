@@ -23,7 +23,6 @@ const NavBar = () => {
         {/* Logo */}
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-10 w-auto" />
-          <p className='text-white'>Morgan Technical Training</p>
         </div>
 
         {/* Hamburger menu for mobile */}
