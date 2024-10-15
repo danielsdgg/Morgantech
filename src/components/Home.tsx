@@ -8,9 +8,9 @@ import { Link, NavLink } from 'react-router-dom';
 const Home = () => {
     const testimonials = [
         {
-          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQds_Eqs_12_ujshkc9-HVkMFxRhIeLxCnnhw&s",
-          name: "Matthew Murdock",
-          title: "Marketing Agent",
+          image: "https://res.cloudinary.com/ddei3mzex/image/upload/v1728998699/IMG_5230_qib0qp.jpg",
+          name: "Nathan Nyongesa",
+          title: "Technical Mentor",
           testimonial: "Working with Morgan Technical has been significantly more effective in training newbie techies."
         },
         {
