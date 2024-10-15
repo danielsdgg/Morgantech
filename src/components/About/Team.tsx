@@ -92,7 +92,6 @@ const Team = () => {
                             </ul>
                         </div>
                     </div>
-                    
                     {/* Repeat the above structure for the other team members */}
                 </div>
             </div>
