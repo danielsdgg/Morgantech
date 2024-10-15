@@ -23,8 +23,8 @@ const NavBar = () => {
         {/* Logo */}
         <div className="flex items-center">
           <img src={logo} alt="Logo" className="h-10 w-auto" />
+          <p className='text-white'>Morgan Technical Training</p>
         </div>
-        <p className='text-white'>Morgan Technical Training</p>
 
         {/* Hamburger menu for mobile */}
         <div className="lg:hidden">
@@ -148,12 +148,10 @@ const NavBar = () => {
           <ul>
             {/* Home */}
             <li>
-              <p
-                className="block py-2 px-4 text-white hover:text-orange-400"
-                onClick={toggleMenu}
-              >
+             <Link to={'/'}> <p className="block py-2 px-4 text-white hover:text-orange-400"
+                onClick={toggleMenu}>
                 Home
-              </p>
+              </p> </Link>
             </li>
 
             {/* About Dropdown */}
@@ -174,6 +172,7 @@ const NavBar = () => {
                       </p>
                     </Link>
                   </li>
+                  <hr></hr>
                   <li>
                     <p className="block py-2 px-4 text-gray-300 hover:bg-gray-700 rounded">
                       Our Team
@@ -198,42 +197,42 @@ const NavBar = () => {
                     <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Web Design
                     </p>
-                  </li>
+                  </li> <hr></hr>
                   <li>
                     <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Accounting Packages
                     </p>
-                  </li>
+                  </li> <hr></hr>
                   <li>
                     <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Video Editing/Motion Graphics
                     </p>
-                  </li>
+                  </li> <hr></hr>
                   <li>
                     <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Graphics Design Packages
                     </p>
-                  </li>
+                  </li> <hr></hr>
                   <li>
                     <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Computer Packages
                     </p>
-                  </li>
+                  </li> <hr></hr>
                   <li>
                     <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Frontend Programming
                     </p>
-                  </li>
+                  </li> <hr></hr>
                   <li>
                     <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Backend Programming
                     </p>
-                  </li>
+                  </li> <hr></hr>
                   <li>
                     <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Cyber Security
                     </p>
-                  </li>
+                  </li> <hr></hr>
                   <li>
                     <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Android Programming

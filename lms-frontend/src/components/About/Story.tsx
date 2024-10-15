@@ -7,36 +7,7 @@ const Story: React.FC = () => {
     <>
       <NavBar />
       {/* 1 */}
-      <section className="relative bg-gray-100 py-24">
-  <div className="container mx-auto px-4">
-    {/* Section with Image Background */}
-    <div 
-      className="relative flex flex-col justify-center items-start bg-cover bg-center bg-no-repeat h-auto min-h-[400px] sm:h-[500px] rounded-lg shadow-lg"
-      style={{
-        backgroundImage: `url('https://png.pngtree.com/thumb_back/fh260/background/20210828/pngtree-binary-matrix-code-flow-dark-abstract-background-image_770045.jpg')`
-      }}
-    >
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-
-      {/* Text Content */}
-      <div className="relative z-10 p-6 sm:p-8 text-white">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">The Morgan Technical Story</h2>
-        <p className="text-base sm:text-lg mb-4">
-        At Morgan-Technical-Training, our journey began with a simple mission: to empower individuals & organizations with cutting-edge tech solutions. Founded by a team of passionate experts, we envisioned a company that not only safeguards digital assets but also fosters a culture of security awareness.
-        </p>
-        <p className="text-base sm:text-lg mb-4">
-        Over the years, Morgan Technical has grown into a trusted partner for businesses. Our commitment to innovation and excellence drives us to continuously enhance our services, ensuring that we stay up-to-date with trending technologies.
-        </p>
-        <p className="text-base sm:text-lg">
-          We believe that cybersecurity is more than just technology; it's about people, processes, and a proactive mindset.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-{/* 2 */}
-<section className="bg-white py-16">
+      <section className="bg-white py-24">
   <div className="container mx-auto px-4">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       
@@ -71,6 +42,30 @@ const Story: React.FC = () => {
   </div>
 </section>
 
+    {/* 2 */}
+    <section className="relative bg-gray-100 py-24">
+        <div className="container mx-auto px-4">
+            {/* Section with Image Background */}
+            <div className="relative flex flex-col justify-center items-start bg-cover bg-center bg-no-repeat h-auto min-h-[400px] sm:h-[500px] rounded-lg shadow-lg"
+            style={{backgroundImage: `url('https://www.shutterstock.com/image-illustration/moving-through-abstract-fractal-glowing-600nw-1129663493.jpg')`}}>
+                {/* Overlay for readability */}
+            <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+            {/* Text Content */}
+            <div className="relative z-10 p-6 sm:p-8 text-white">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">The Morgan Technical Story</h2>
+                <p className="text-base sm:text-lg mb-4">
+                At Morgan-Technical-Training, our journey began with a simple mission: to empower individuals & organizations with cutting-edge tech solutions. Founded by a team of passionate experts, we envisioned a company that not only safeguards digital assets but also fosters a culture of security awareness.
+                </p>
+                <p className="text-base sm:text-lg mb-4">
+                Over the years, Morgan Technical has grown into a trusted partner for businesses. Our commitment to innovation and excellence drives us to continuously enhance our services, ensuring that we stay up-to-date with trending technologies.
+                </p>
+                <p className="text-base sm:text-lg">
+                  We believe that cybersecurity is more than just technology; it's about people, processes, and a proactive mindset.
+                </p>
+            </div>
+            </div>
+        </div>
+      </section>
       <Footer />
     </>
   );

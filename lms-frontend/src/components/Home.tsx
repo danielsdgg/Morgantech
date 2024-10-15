@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import NavBar from './Navbar'
 import Footer from './Footer'
 import { useSwipeable } from "react-swipeable";
+import { Link, NavLink } from 'react-router-dom';
 
 
 const Home = () => {
@@ -41,6 +42,10 @@ const Home = () => {
     <>
     <NavBar />
     <div>
+        {/* 0 */}
+        <div className='w-full bg-black text-white py-24 px-2 text-center md:text-5xl sm:text-3xl text-3xl'>
+        <p>Welcome to the official website of <b>Morgan Technical Training.</b></p>
+        </div>
         {/* part 1 */}
         <section className="relative bg-gray-800 h-[700px]">
   <div className="absolute inset-0">
@@ -56,11 +61,9 @@ const Home = () => {
     <p className="text-lg md:text-xl mb-8">
       Join us in navigating the world of technology with innovative solutions designed for your success.
     </p>
-    <p
-      className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition cursor-pointer"
-    >
+    <Link to={'/courses'}><p className="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition cursor-pointer">
       Get Started
-    </p>
+    </p> </Link>
   </div>
 </section>
 
@@ -127,9 +130,9 @@ const Home = () => {
       </div>
     </div>
     {/* part 3 */}
-    <section className="bg-gray-100 py-16">
+    <section className="bg-gray-100 py-16 relative">
   <div className="container mx-auto px-4">
-    <h2 className="text-4xl font-bold text-center mb-10">Top Courses</h2>
+    <h2 className="text-4xl font-bold text-center mb-10 underline">Top Courses</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {/* Feature 1 */}
       <div className="bg-white p-6 rounded-lg shadow-lg text-center">
@@ -168,7 +171,15 @@ const Home = () => {
       </div>
     </div>
   </div>
+
+  {/* Right-faced arrow at bottom right */}
+  <div className="absolute bottom-0 right-0 p-8">
+    <NavLink to={'/courses'}> <p className="text-4xl text-gray-700 hover:text-blue-500 cursor-pointer">
+      &rarr;
+    </p> </NavLink>
+  </div>
 </section>
+
 {/* part 4 */}
 <section className="py-12 bg-gray-200">
       <div className="container mx-auto px-4">
