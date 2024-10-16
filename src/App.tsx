@@ -7,6 +7,8 @@ import Contact from './components/Contact';
 import Courses from './components/Courses';
 import Frontend from './components/Programs/Frontend';
 import Backend from './components/Programs/Backend';
+import Cyber from './components/Programs/Cyber';
+import Graphics from './components/Programs/Graphics';
 
 function App() {
   return (
@@ -20,6 +22,8 @@ function App() {
           <Route path='/courses' element={<Courses/>} />
           <Route path='/frontend' element={<Frontend/>} />
           <Route path='/backend' element={<Backend/>} />
+          <Route path='/cyber' element={<Cyber/>} />
+          <Route path='/graphics' element={<Graphics/>} />
 
         </Routes>
       </Router>

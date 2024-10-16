@@ -43,7 +43,7 @@ const Home = () => {
     <NavBar />
     <div>
         {/* 0 */}
-        <div className='w-full bg-black text-white py-24 px-2 text-center md:text-5xl sm:text-3xl text-3xl'>
+        <div className='h-auto bg-gray-400 text-black py-24 text-center md:text-5xl sm:text-3xl text-3xl'>
         <p>Welcome to the official website of <b>Morgan Technical Training.</b></p>
         </div>
         {/* part 1 */}
@@ -153,9 +153,9 @@ const Home = () => {
         <p className="text-gray-700">
             Cybersecurity protects systems, networks, and data from cyber threats like attacks and breaches. It involves implementing security measures, monitoring for suspicious activity, and responding to incidents to ensure data integrity and confidentiality.
         </p>
-        <a href="#feature2" className="text-blue-500 hover:underline mt-4 block">
+        <Link to={'/cyber'}><p className="text-blue-500 hover:underline mt-4 block">
           Learn More
-        </a>
+        </p></Link>
       </div>
 
       {/* Feature 3 */}
@@ -165,9 +165,9 @@ const Home = () => {
         <p className="text-gray-700">
             Graphic design involves creating visual content to communicate messages effectively through typography, imagery, and layout. Designers use software and creative techniques to produce graphics for various media, including print, digital, and advertising.
         </p>
-        <a href="#feature3" className="text-blue-500 hover:underline mt-4 block">
+        <Link to={'/graphics'}><p className="text-blue-500 hover:underline mt-4 block">
           Learn More
-        </a>
+        </p></Link>
       </div>
     </div>
   </div>
