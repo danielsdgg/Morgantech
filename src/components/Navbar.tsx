@@ -96,14 +96,14 @@ const NavBar = () => {
                 </p>
               </li>
               <li>
-                <p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+              <Link to={'/frontend'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
                   Frontend Programming
-                </p>
+                </p> </Link>
               </li>
               <li>
-                <p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                <Link to={'/backend'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
                   Backend Programming
-                </p>
+                </p></Link>
               </li>
               <li>
                 <p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
@@ -219,14 +219,14 @@ const NavBar = () => {
                     </p>
                   </li> <hr></hr>
                   <li>
-                    <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
+                    <Link to={'/frontend'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Frontend Programming
-                    </p>
+                    </p></Link>
                   </li> <hr></hr>
                   <li>
-                    <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
+                  <Link to={'/backend'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Backend Programming
-                    </p>
+                    </p> </Link>
                   </li> <hr></hr>
                   <li>
                     <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">

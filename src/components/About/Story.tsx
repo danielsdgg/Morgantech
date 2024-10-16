@@ -47,7 +47,7 @@ const Story: React.FC = () => {
         <div className="container mx-auto px-4">
             {/* Section with Image Background */}
             <div className="relative flex flex-col justify-center items-start bg-cover bg-center bg-no-repeat h-auto min-h-[400px] sm:h-[500px] rounded-lg shadow-lg"
-            style={{backgroundImage: `url('https://www.shutterstock.com/image-illustration/moving-through-abstract-fractal-glowing-600nw-1129663493.jpg')`}}>
+            style={{backgroundImage: `url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZyb250JTIwZW5kfGVufDB8fDB8fHww')`}}>
                 {/* Overlay for readability */}
             <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
             {/* Text Content */}
