@@ -5,6 +5,7 @@ import Team from './components/About/Team';
 import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
 import Contact from './components/Contact';
 import Courses from './components/Courses';
+import Frontend from './components/Programs/Frontend';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/story' element={<Story/>} />
           <Route path='/team' element={<Team/>} />
           <Route path='/courses' element={<Courses/>} />
+          <Route path='/frontend' element={<Frontend/>} />
 
         </Routes>
       </Router>

@@ -141,9 +141,9 @@ const Home = () => {
         <p className="text-gray-700">
             A frontend developer is responsible for creating the visual and interactive aspects of a website or application. We train on languages like HTML, CSS, and JavaScript to build user interfaces, ensuring a seamless user experience. Their role includes collaborating with designers, optimizing performance, and ensuring compatibility across different devices and browsers.
         </p>
-        <a href="#feature1" className="text-blue-500 hover:underline mt-4 block">
+        <Link to={'/frontend'}><p className="text-blue-500 hover:underline mt-4 block">
           Learn More
-        </a>
+        </p> </Link>
       </div>
       
       {/* Feature 2 */}

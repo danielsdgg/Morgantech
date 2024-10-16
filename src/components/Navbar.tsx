@@ -21,7 +21,7 @@ const NavBar = () => {
     <nav className="bg-gray-800 shadow-md fixed w-full z-20 top-0 left-0">
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center cursor-pointer">
           <img src={logo} alt="Logo" className="h-10 w-auto" />
         </div>
 
@@ -143,7 +143,7 @@ const NavBar = () => {
         } transition-transform duration-300 ease-in-out z-20 lg:hidden`}
       >
         <div className="p-4">
-          <img src={logo} alt="Logo" className="h-10 w-auto mb-4" />
+          <Link to={'/'}><img src={logo} alt="Logo" className="h-10 w-auto mb-4" /> </Link>
           <ul>
             {/* Home */}
             <li>
@@ -173,9 +173,10 @@ const NavBar = () => {
                   </li>
                   <hr></hr>
                   <li>
+                    <Link to={'/team'}>
                     <p className="block py-2 px-4 text-gray-300 hover:bg-gray-700 rounded">
                       Our Team
-                    </p>
+                    </p> </Link>
                   </li>
                 </ul>
               )}
