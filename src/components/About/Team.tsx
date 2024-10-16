@@ -45,10 +45,10 @@ const Team = () => {
                     {/* second */}
                     <div className="col-span-3 md:col-span-1 pt-9">
                         <div className="bg-gray-100 rounded-lg p-8 transition-colors duration-300 hover:bg-blue-500 hover:text-white">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQds_Eqs_12_ujshkc9-HVkMFxRhIeLxCnnhw&s" className="mx-auto w-48 h-48 rounded-full mb-6" alt="pic" />
+                            <img src="https://res.cloudinary.com/ddei3mzex/image/upload/v1728998699/IMG_5230_qib0qp.jpg" className="mx-auto w-48 h-48 rounded-full mb-6" alt="pic" />
                             <h3 className="text-xl font-semibold">Nathan Nyongesa</h3>
                             <div className="mb-4">
-                                <p className="text-gray-600">Marketing manager</p>
+                                <p className="text-gray-600">Technical Mentor</p>
                             </div>
                             <p className="text-black">Nathan first fell in love with digital marketing at the university. He loves to learn, and looks forward to being part of this new exciting industry for many years.</p>
                             <ul className="flex justify-center mt-6">

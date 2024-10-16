@@ -47,7 +47,7 @@ const NavBar = () => {
               About
             </p>
             {/* Dropdown Menu */}
-            <ul className="absolute left-0 top-full mt-0 hidden group-hover:block bg-white shadow-md">
+            <ul className="absolute w-[200px] left-0 top-full mt-0 hidden group-hover:block bg-white shadow-md">
               <li>
                 <Link to={'/story'}>
                   <p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
@@ -69,7 +69,7 @@ const NavBar = () => {
               Programs <AiOutlineDown className="ml-1" />
             </p>
             {/* Dropdown Menu */}
-            <ul className="absolute left-0 top-full mt-0 hidden group-hover:block bg-white shadow-md">
+            <ul className="absolute w-[250px] left-0 top-full mt-0 hidden group-hover:block bg-white shadow-md">
               <li>
                 <p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
                   Web Design

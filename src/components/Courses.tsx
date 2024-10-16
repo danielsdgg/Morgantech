@@ -45,9 +45,9 @@ const Courses:React.FC = () => {
         <p className="text-gray-700">
             Cybersecurity protects systems, networks, and data from cyber threats like attacks and breaches. It involves implementing security measures, monitoring for suspicious activity, and responding to incidents to ensure data integrity and confidentiality.
         </p>
-        <a href="#feature2" className="text-blue-500 hover:underline mt-4 block">
+        <Link to={'/cyber'}><p className="text-blue-500 hover:underline mt-4 block">
           Learn More
-        </a>
+        </p> </Link>
       </div>
 
       {/* Feature 3 */}
@@ -57,9 +57,9 @@ const Courses:React.FC = () => {
         <p className="text-gray-700">
             Graphic design involves creating visual content to communicate messages effectively through typography, imagery, and layout. Designers use software and creative techniques to produce graphics for various media, including print, digital, and advertising.
         </p>
-        <a href="#feature3" className="text-blue-500 hover:underline mt-4 block">
+        <Link to={'/graphics'}><p className="text-blue-500 hover:underline mt-4 block">
           Learn More
-        </a>
+        </p></Link>
       </div>
             {/* Feature 4 */}
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
