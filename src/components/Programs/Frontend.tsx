@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import NavBar from '../Navbar';
 import Footer from '../Footer';
 
-const Frontend = () => {
+const Frontend:React.FC = () => {
   return (
     <>
     <NavBar/>
@@ -125,10 +125,7 @@ const Frontend = () => {
     {/* Apply Button */}
     <div>
       <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Ready to Join?</h2>
-      <NavLink 
-        to="/form" 
-        className="bg-blue-600 text-white py-4 px-10 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 text-lg md:text-xl"
-      >
+      <NavLink to="/form" className="bg-blue-600 text-white py-4 px-10 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 text-lg md:text-xl">
         Apply Now
       </NavLink>
     </div>

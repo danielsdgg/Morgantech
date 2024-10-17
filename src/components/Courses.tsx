@@ -68,9 +68,9 @@ const Courses:React.FC = () => {
         <p className="text-gray-700">
         The Accounting Packages Course equips learners with essential skills to manage and streamline financial processes using popular software like QuickBooks, Sage, and Tally. Students will learn to record transactions, generate financial reports, and automate accounting tasks to ensure accuracy and efficiency in financial management. This course is ideal for individuals seeking to enhance their accounting expertise, enabling them to effectively manage budgets, taxes, payroll, and financial statements across various business environments.  
         </p>
-        <p className="text-blue-500 hover:underline mt-4 block">
+        <Link to={'/accounts'}><p className="text-blue-500 hover:underline mt-4 block">
           Learn More
-        </p>
+        </p></Link>
       </div>
             {/* Feature 5 */}
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
@@ -90,9 +90,9 @@ const Courses:React.FC = () => {
         <p className="text-gray-700">
           The Video Editing and Motion Graphics Course equips students with the skills to create captivating visual content for films, social media, and marketing. You will learn how to use industry-standard software like Adobe Premiere Pro and After Effects to edit footage, add effects, transitions, and create dynamic motion graphics. This course is perfect for those interested in bringing stories to life through creative editing techniques and professional animations, making content more engaging and visually appealing.
         </p>
-        <p className="text-blue-500 hover:underline mt-4 block">
+        <Link to={'/videoediting'}><p className="text-blue-500 hover:underline mt-4 block">
           Learn More
-        </p>
+        </p></Link>
       </div>
             {/* Feature 7 */}
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
@@ -101,9 +101,9 @@ const Courses:React.FC = () => {
         <p className="text-gray-700">
           The Computer Packages Course provides foundational skills in essential software applications used in everyday office and personal computing tasks. You will learn how to navigate and work with Microsoft Office tools such as Word, Excel, and PowerPoint, as well as basic computer operations, file management, and internet usage. This course is designed for individuals looking to improve their digital literacy, making them more efficient in both professional and academic environments.
         </p>
-        <p className="text-blue-500 hover:underline mt-4 block">
+        <Link to={'/computerpackages'}><p className="text-blue-500 hover:underline mt-4 block">
           Learn More
-        </p>
+        </p></Link>
       </div>
             {/* Feature 8 */}
             <div className="bg-white p-6 rounded-lg shadow-lg text-center">
@@ -112,9 +112,9 @@ const Courses:React.FC = () => {
         <p className="text-gray-700">
           The Android Programming Course equips learners with the skills needed to develop mobile applications for Android devices. You will dive into key programming languages such as Java and Kotlin, learning to design, build, and deploy functional and user-friendly apps. The course also covers essential concepts like user interface (UI) design, app performance optimization, and integrating APIs, preparing you to create robust Android apps for a range of users.
         </p>
-        <p className="text-blue-500 hover:underline mt-4 block">
+        <Link to={'/android'}><p className="text-blue-500 hover:underline mt-4 block">
           Learn More
-        </p>
+        </p></Link>
       </div>
       {/* feature 9 */}
       <div className="bg-white p-6 rounded-lg shadow-lg text-center">
@@ -123,9 +123,9 @@ const Courses:React.FC = () => {
         <p className="text-gray-700">
           The Web Design Course focuses on teaching students how to create visually appealing, user-friendly websites. You’ll learn the fundamentals of design principles, including layout, color theory, typography, and responsive design to ensure websites look great across all devices. This course covers the use of design tools and software like Adobe XD and Figma, along with HTML and CSS to build modern, intuitive websites that offer an excellent user experience.
         </p>
-        <p className="text-blue-500 hover:underline mt-4 block">
+        <Link to={'/webdesign'}><p className="text-blue-500 hover:underline mt-4 block">
           Learn More
-        </p>
+        </p></Link>
       </div>
     </div>
   </div>

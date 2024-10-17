@@ -71,19 +71,19 @@ const NavBar = () => {
             {/* Dropdown Menu */}
             <ul className="absolute w-[250px] left-0 top-full mt-0 hidden group-hover:block bg-white shadow-md">
               <li>
-                <p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                <Link to={'/webdesign'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
                   Web Design
-                </p>
+                </p></Link>
               </li>
               <li>
-                <p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                <Link to={'/accounts'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
                   Accounting Packages
-                </p>
+                </p></Link>
               </li>
               <li>
-                <p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                <Link to={'/videoediting'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
                   Video Editing/Motion Graphics
-                </p>
+                </p></Link>
               </li>
               <li>
                 <Link to={'/graphics'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
@@ -91,9 +91,9 @@ const NavBar = () => {
                 </p></Link>
               </li>
               <li>
-                <p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                <Link to={'/computerpackages'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
                   Computer Packages
-                </p>
+                </p></Link>
               </li>
               <li>
               <Link to={'/frontend'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
@@ -111,9 +111,9 @@ const NavBar = () => {
                 </p></Link>
               </li>
               <li>
-                <p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                <Link to={'/android'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
                   Android Programming
-                </p>
+                </p></Link>
               </li>
             </ul>
           </li>
@@ -194,19 +194,19 @@ const NavBar = () => {
               {activeSubMenu === 'programs' && (
                 <ul className="mt-2 ml-4">
                   <li>
-                    <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
+                    <Link to={'/webdesign'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Web Design
-                    </p>
+                    </p></Link>
                   </li> <hr></hr>
                   <li>
-                    <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
+                    <Link to={'/accounts'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Accounting Packages
-                    </p>
+                    </p></Link>
                   </li> <hr></hr>
                   <li>
-                    <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
+                    <Link to={'/videoediting'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Video Editing/Motion Graphics
-                    </p>
+                    </p></Link>
                   </li> <hr></hr>
                   <li>
                   <Link to={'/graphics'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
@@ -214,9 +214,9 @@ const NavBar = () => {
                     </p></Link>
                   </li> <hr></hr>
                   <li>
-                    <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
+                    <Link to={'/computerpackages'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Computer Packages
-                    </p>
+                    </p></Link>
                   </li> <hr></hr>
                   <li>
                     <Link to={'/frontend'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
@@ -234,9 +234,9 @@ const NavBar = () => {
                     </p></Link>
                   </li> <hr></hr>
                   <li>
-                    <p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
+                    <Link to={'/android'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Android Programming
-                    </p>
+                    </p></Link>
                   </li>
                 </ul>
               )}
