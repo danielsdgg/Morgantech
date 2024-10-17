@@ -187,16 +187,14 @@ const Home = () => {
 <section className="py-12 bg-gray-200">
       <div className="container mx-auto px-4">
         {/* Heading */}
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Watch Our Latest Video</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Embrace the digital world</h2>
 
         {/* Video Container */}
         <div className="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg">
           {/* Adjust aspect ratio for different screen sizes */}
           <div className="relative pb-[56.25%] sm:pb-[65%] lg:pb-[28.125%]">
-            <video
-              className="absolute top-0 left-0 w-full h-full"
-              controls
-              src="https://res.cloudinary.com/ddei3mzex/video/upload/v1725881758/Virtual_Tour___It_s_More_Fun_with_You_in_El_Nido_cobll8.mp4"
+            <video className="absolute top-0 left-0 w-full h-full border-4 border-gray-400" controls
+            src="https://res.cloudinary.com/ddei3mzex/video/upload/v1729160992/Digital_globe_fw3twx.mp4"
             ></video>
           </div>
         </div>

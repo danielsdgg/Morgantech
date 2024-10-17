@@ -1,7 +1,7 @@
 // src/components/NavBar.tsx
 import React, { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose, AiOutlineDown, AiOutlineUp } from 'react-icons/ai';
-import logo from '../assets/morgan_logo.png';
+// import logo from '../assets/morgan_logo.png';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
@@ -22,7 +22,7 @@ const NavBar = () => {
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Logo */}
         <div className="flex items-center cursor-pointer">
-          <img src={logo} alt="Logo" className="h-10 w-auto" />
+          <img src="https://res.cloudinary.com/ddei3mzex/image/upload/v1729158010/crest_x1gutu.jpg" alt="Logo" className="h-10 w-auto" />
         </div>
 
         {/* Hamburger menu for mobile */}
@@ -143,7 +143,7 @@ const NavBar = () => {
         } transition-transform duration-300 ease-in-out z-20 lg:hidden`}
       >
         <div className="p-4">
-          <Link to={'/'}><img src={logo} alt="Logo" className="h-10 w-auto mb-4" /> </Link>
+          <Link to={'/'}><img src="https://res.cloudinary.com/ddei3mzex/image/upload/v1729158010/crest_x1gutu.jpg" alt="Logo" className="h-10 w-auto mb-4" /> </Link>
           <ul>
             {/* Home */}
             <li>

@@ -20,6 +20,11 @@ const Graphics:React.FC = () => {
           </div>
         </section>
 
+        {/* ongoing intake */}
+        <div className='w-full bg-blue-900 text-orange-400 py-16 px-4 text-center md:text-3xl sm:text-2xl text-1xl'>
+            <p>Applications ongoing for the <b>November 6th 2024</b> intake</p>
+        </div>
+
         {/* What to Expect */}
         <section className="py-16">
           <div className="container mx-auto px-4 text-center">
@@ -57,7 +62,7 @@ const Graphics:React.FC = () => {
                 <li>Regular attendance in live sessions is crucial for successful completion.</li>
               </ul>
             </div>
-            <img className='w-[700px] mx-auto rounded-3xl my-4' src='https://media.istockphoto.com/id/1357830750/vector/geometric-illustration-of-multi-coloured-human-figures.jpg?s=612x612&w=0&k=20&c=2uvkAa8B9pyBcMbMUoE6zQVXPrNAz8Tdysdfq8G3oKM=' alt='design tools'/>
+            <img className='w-[700px] mx-auto rounded-3xl my-4' src='https://res.cloudinary.com/ddei3mzex/image/upload/v1729160090/graphic_design_xzydud.jpg' alt='design tools'/>
           </div>
         </div>
 

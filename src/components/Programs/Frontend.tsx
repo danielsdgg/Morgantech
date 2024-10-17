@@ -14,11 +14,16 @@ const Frontend = () => {
         <div className="container mx-auto h-full flex flex-col justify-center items-center text-center relative z-10">
           <h1 className="text-white text-5xl font-bold mb-4">Frontend Programming BootCamp</h1>
           <p className="text-white text-lg mb-8">Master frontend development skills to build stunning web applications</p>
-          <NavLink to="/apply" className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 text-lg">
+          <NavLink to="/form" className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 text-lg">
             Apply Now
           </NavLink>
         </div>
       </section>
+
+      {/* ongoing intake */}
+      <div className='w-full bg-blue-900 text-orange-400 py-16 px-4 text-center md:text-3xl sm:text-2xl text-1xl'>
+        <p>Applications ongoing for the <b>November 6th 2024</b> intake</p>
+      </div>
 
       {/* What to Expect */}
       <section className="py-16">
@@ -121,7 +126,7 @@ const Frontend = () => {
     <div>
       <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Ready to Join?</h2>
       <NavLink 
-        to="/apply" 
+        to="/form" 
         className="bg-blue-600 text-white py-4 px-10 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 text-lg md:text-xl"
       >
         Apply Now

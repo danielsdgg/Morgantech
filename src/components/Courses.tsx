@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from './Navbar'
 import Footer from './Footer'
-import logo from '../assets/morgan_logo.png'
+// import logo from '../assets/morgan_logo.png'
 import { Link } from 'react-router-dom'
 
 const Courses:React.FC = () => {
@@ -17,7 +17,7 @@ const Courses:React.FC = () => {
                 At Morgan Technical, we offer a diverse range of courses designed to equip students with the skills and knowledge needed for success in today's competitive world. Our programs span various disciplines, including Business, Computer Science, Engineering, and the Arts, each taught by experienced faculty. With a focus on both theoretical understanding and practical application, our courses are tailored to meet industry demands. Join us and take the first step toward a fulfilling career through our comprehensive and innovative curriculum.
                 </p>
             </div>
-            <img className='w-[500px] mx-auto rounded-3xl my-4' src={logo} alt='Logo'/>
+            <img className='w-[500px] mx-auto rounded-3xl my-4' src="https://res.cloudinary.com/ddei3mzex/image/upload/v1729158010/crest_x1gutu.jpg" alt='Logo'/>
 
         </div>
     </div>

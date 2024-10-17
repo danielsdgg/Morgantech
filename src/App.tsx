@@ -9,6 +9,7 @@ import Frontend from './components/Programs/Frontend';
 import Backend from './components/Programs/Backend';
 import Cyber from './components/Programs/Cyber';
 import Graphics from './components/Programs/Graphics';
+import Forms from './components/Forms';
 
 function App() {
   return (
@@ -24,6 +25,8 @@ function App() {
           <Route path='/backend' element={<Backend/>} />
           <Route path='/cyber' element={<Cyber/>} />
           <Route path='/graphics' element={<Graphics/>} />
+
+          <Route path='/form' element={<Forms/>} />
 
         </Routes>
       </Router>
