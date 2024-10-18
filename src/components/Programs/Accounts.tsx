@@ -18,9 +18,9 @@ const Accounts: React.FC = () => {
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="container mx-auto h-full flex flex-col justify-center items-center text-center relative z-10">
-            <h1 className="text-white text-5xl font-bold mb-4">Accounting BootCamp</h1>
+            <h1 className="text-white text-5xl font-bold mb-4">Accounting Course</h1>
             <p className="text-white text-lg mb-8">
-              Master the essentials of accounting and financial management
+              Master the essentials of accounting with QuickBooks and Sage 50
             </p>
             <NavLink
               to="/form"
@@ -44,21 +44,21 @@ const Accounts: React.FC = () => {
             <h2 className="text-4xl font-semibold mb-8">What to Expect</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gray-200 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-4">QuickBooks Enterprise </h3>
+                <h3 className="text-xl font-semibold mb-4">QuickBooks Enterprise</h3>
                 <p>
-                  Understand the fundamentals of financial statements, balance sheets, and income reports.
+                  Master QuickBooks for managing financial transactions, generating reports, and handling payroll efficiently.
                 </p>
               </div>
               <div className="bg-gray-200 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-4">Taxation</h3>
+                <h3 className="text-xl font-semibold mb-4">Sage 50 Accounting</h3>
                 <p>
-                  Learn the key concepts of tax management, filing, and strategies for corporate tax savings.
+                  Learn how to manage accounting tasks, process invoices, and create financial statements using Sage 50.
                 </p>
               </div>
               <div className="bg-gray-200 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-4">Management Accounting</h3>
+                <h3 className="text-xl font-semibold mb-4">Advanced Financial Reporting</h3>
                 <p>
-                  Develop the skills to analyze, interpret, and present financial data for decision-making.
+                  Develop skills in generating detailed financial reports, tracking budgets, and making data-driven decisions using QuickBooks and Sage 50.
                 </p>
               </div>
             </div>
@@ -71,7 +71,7 @@ const Accounts: React.FC = () => {
             <div className="flex flex-col justify-center text-black">
               <h2 className="text-4xl font-semibold mb-8">Course Necessities:</h2>
               <ul className="list-disc list-inside text-left space-y-2 text-1xl">
-                <li>Access to a computer with financial accounting software (e.g., QuickBooks, Excel).</li>
+                <li>Access to QuickBooks and Sage 50 software.</li>
                 <li>Basic knowledge of mathematics and calculations.</li>
                 <li>Commitment to study at least 20 hours a week.</li>
                 <li>Proficiency in English for class discussions and assignments.</li>
@@ -92,13 +92,12 @@ const Accounts: React.FC = () => {
             <h2 className="text-4xl font-semibold mb-8">Course Content</h2>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <ul className="list-disc list-inside text-left space-y-2">
-                <li>Introduction to Accounting</li>
-                <li>Financial Statements & Reports</li>
-                <li>Taxation and Tax Law</li>
-                <li>Cost and Management Accounting</li>
-                <li>Financial Auditing</li>
-                <li>Use of Accounting Software</li>
-                <li>Budgeting & Forecasting</li>
+                <li>Introduction to QuickBooks and Sage 50</li>
+                <li>Managing Financial Transactions with QuickBooks</li>
+                <li>Creating Financial Reports using Sage 50</li>
+                <li>Payroll Management in QuickBooks</li>
+                <li>Auditing and Compliance with Sage 50</li>
+                <li>Budgeting & Forecasting with Accounting Software</li>
               </ul>
               <div className="relative w-full h-0 pb-56">
                 <video
@@ -121,7 +120,7 @@ const Accounts: React.FC = () => {
               </h2>
               <p className="text-lg md:text-xl text-gray-700">
                 Our Accounting Bootcamp lasts for 12 weeks, offering in-depth
-                training and hands-on experience in accounting practices.
+                training and hands-on experience in QuickBooks and Sage 50.
               </p>
             </div>
 

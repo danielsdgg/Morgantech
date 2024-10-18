@@ -18,7 +18,7 @@ const Computer: React.FC = () => {
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="container mx-auto h-full flex flex-col justify-center items-center text-center relative z-10">
-            <h1 className="text-white text-5xl font-bold mb-4">Computer Packages BootCamp</h1>
+            <h1 className="text-white text-5xl font-bold mb-4">Computer Packages Course</h1>
             <p className="text-white text-lg mb-8">
               Master essential computer skills and software applications to enhance your productivity.
             </p>
