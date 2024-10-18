@@ -13,7 +13,7 @@ const Accounts: React.FC = () => {
           className="bg-cover bg-center h-[500px] relative"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1556742393-d75f468bfcb0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YWNjb3VudGluZ3xlbnwwfHx8fHww')",
+              "url('https://www.freshbooks.com/wp-content/uploads/2022/02/financial-accounting-1.jpg')",
           }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -44,7 +44,7 @@ const Accounts: React.FC = () => {
             <h2 className="text-4xl font-semibold mb-8">What to Expect</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-gray-200 p-6 rounded-lg shadow-md">
-                <h3 className="text-xl font-semibold mb-4">Financial Accounting</h3>
+                <h3 className="text-xl font-semibold mb-4">QuickBooks Enterprise </h3>
                 <p>
                   Understand the fundamentals of financial statements, balance sheets, and income reports.
                 </p>
@@ -80,7 +80,7 @@ const Accounts: React.FC = () => {
             </div>
             <img
               className="w-[700px] mx-auto rounded-3xl my-4"
-              src="https://cdn.corporatefinanceinstitute.com/assets/accounting-1024x683.jpeg"
+              src="https://bachelors-completion.northeastern.edu/wp-content/uploads/2019/04/Accounting-or-Finance-1.jpg"
               alt="Accounting"
             />
           </div>
@@ -104,7 +104,7 @@ const Accounts: React.FC = () => {
                 <video
                   className="absolute top-0 left-0 w-full h-full border-4 border-gray-300"
                   controls
-                  src="https://res.cloudinary.com/ddei3mzex/video/upload/v1729163016/What_does_an_accountant_do_and_why_is_it_so_important__c1ohht.mp4"
+                  src="https://res.cloudinary.com/ddei3mzex/video/upload/v1729243088/How_to_convert_QuickBooks_file_in_Sage50_tm4ozm.mp4"
                 ></video>
               </div>
             </div>

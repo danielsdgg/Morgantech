@@ -82,11 +82,9 @@ const VideoEditing: React.FC = () => {
                 <li>Consistent attendance in all live sessions and adherence to deadlines for project submissions.</li>
               </ul>
             </div>
-            <img
-              className="w-[700px] mx-auto rounded-3xl my-4"
-              src="https://www.pixelworks.com/images/creative-professional/what-is-visual-effects-vfx-00023.jpg"
-              alt="motion-graphics"
-            />
+            <img className="w-[700px] mx-auto rounded-3xl my-4"
+            src="https://images.unsplash.com/photo-1636971819476-aa41dc3db0d0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmlkZW8lMjBlZGl0aW5nfGVufDB8fDB8fHww"
+            alt="motion-graphics"/>
           </div>
         </div>
 

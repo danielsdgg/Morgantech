@@ -13,7 +13,7 @@ const Webdesign: React.FC = () => {
           className="bg-cover bg-center h-[500px] relative"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1582543209076-95c6bcd6c3af?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHdlYiUyMGRlc2lnbnxlbnwwfHx8fDE2ODcxNzk1MDQ&auto=format')",
+              "url('https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/60108162d58c7f1b92c2b769_6002086f72b7275ddf01dde6_web-design-principles.jpeg')",
           }}
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
@@ -100,11 +100,9 @@ const Webdesign: React.FC = () => {
                 <li>Publishing Websites Online</li>
               </ul>
               <div className="relative w-full h-0 pb-56">
-                <video
-                  className="absolute top-0 left-0 w-full h-full border-4 border-gray-300"
-                  controls
-                  src="https://www.w3schools.com/html/mov_bbb.mp4"
-                ></video>
+                <video className="absolute top-0 left-0 w-full h-full border-4 border-gray-300" controls
+                src="https://www.w3schools.com/html/mov_bbb.mp4">
+                </video>
               </div>
             </div>
           </div>
