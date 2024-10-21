@@ -1,9 +1,19 @@
 import React, { useState } from 'react';
 import NavBar from '../Navbar';
 import Footer from '../Footer';
+import emailjs from 'emailjs-com'
 
 const Android: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    phone: '',
+    gender: '',
+    highschool: '',
+    course: 'Android Programming',
+    feedback: ''
+  });
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -11,6 +21,34 @@ const Android: React.FC = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
+    setFormData({
+      fullName: '',
+      email: '',
+      phone: '',
+      gender: '',
+      highschool: '',
+      course: 'Android Programming',
+      feedback: ''
+    });
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const sendEmail = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent default form submission
+
+    emailjs.send('service_7x3k6fq', 'template_ukr7tzl', formData, 'hC6uNYFa9xlw96bvG')
+      .then(() => {
+        alert('Application sent successfully!');
+        closeModal(); // Close modal after sending
+      })
+      .catch((error) => {
+        alert('Failed to send application. Please try again later.');
+        console.error('EmailJS error:', error);
+      });
   };
   return (
     <>
@@ -149,41 +187,41 @@ const Android: React.FC = () => {
 
       {/* Application Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50" onClick={closeModal}>
+        <div className="fixed inset-0 pt-2 flex items-center justify-center bg-black bg-opacity-50" onClick={closeModal}>
           <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full" onClick={(e) => e.stopPropagation()}>
             <h2 className="text-2xl text-center font-semibold mb-4">Application Form</h2>
-            <form>
+            <form onSubmit={sendEmail}>
               <div className="mb-4">
                 <label className="block text-gray-700">Full Name</label>
-                <input type="text" required placeholder="Enter your full name" className="w-full border border-gray-300 rounded-lg p-2"/>
+                <input type="text" name="fullName" required placeholder="Enter your full name" className="w-full border border-gray-300 rounded-lg p-2" value={formData.fullName} onChange={handleChange}/>
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700">Email Address</label>
-                <input type="email" required placeholder="Enter your email address" className="w-full border border-gray-300 rounded-lg p-2"/>
+                <input type="email" name="email" required placeholder="Enter your email address" className="w-full border border-gray-300 rounded-lg p-2" value={formData.email} onChange={handleChange}/>
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700">Phone Number</label>
-                <input type="tel" required placeholder="Enter your phone number" className="w-full border border-gray-300 rounded-lg p-2"/>
+                <input type="tel" name="phone" required placeholder="Enter your phone number" className="w-full border border-gray-300 rounded-lg p-2" value={formData.phone} onChange={handleChange}/>
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700">Gender</label>
-                <select className="w-full border border-gray-300 rounded-lg p-2">
+                <select name="gender" className="w-full border border-gray-300 rounded-lg p-2" value={formData.gender} onChange={handleChange}>
                   <option value="">Select Gender</option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                 </select>
               </div>
               <div className="mb-4">
-                <label className="block text-gray-700">Have you completed highschool?</label>
-                <select className="w-full border border-gray-300 rounded-lg p-2">
+                <label className="block text-gray-700">Have you completed high school?</label>
+                <select name="highschool" className="w-full border border-gray-300 rounded-lg p-2" value={formData.highschool} onChange={handleChange}>
                   <option value="">Select</option>
-                  <option value="frontend">Yes</option>
-                  <option value="backend">No</option>
+                  <option value="yes">Yes</option>
+                  <option value="no">No</option>
                 </select>
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700">Course Of Study</label>
-                <select className="w-full border border-gray-300 rounded-lg p-2 bg-gray-400 cursor-not-allowed" defaultValue="Android Programming" disabled>
+                <select name="course" className="w-full border border-gray-300 rounded-lg p-2 bg-gray-200 cursor-not-allowed" value={formData.course} onChange={handleChange} disabled>
                   <option value="">Select a course</option>
                   <option value="Web-design">Web-design</option>
                   <option value="Cyber Security">Cyber Security</option>
@@ -198,7 +236,7 @@ const Android: React.FC = () => {
               </div>
               <div className="mb-4">
                 <label className="block text-gray-700">How did you hear about Morgan Technical Training?*</label>
-                <textarea required placeholder="...." className="w-full border border-gray-300 rounded-lg p-2" rows={3}></textarea>
+                <textarea name="feedback" required placeholder="...." className="w-full border border-gray-300 rounded-lg p-2" rows={3} value={formData.feedback} onChange={handleChange}></textarea>
               </div>
               <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded-lg">
                 Submit Application

@@ -229,18 +229,11 @@ const Frontend: React.FC = () => {
             </div>
           </div>
         </section>
-        
-        <div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Ready to Join?</h2>
-          <button onClick={openModal} className="bg-blue-600 text-white py-4 px-10 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 text-lg md:text-xl">
-            Apply Now
-          </button>
-        </div>
       </div>
 
       {/* Application Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50" onClick={closeModal}>
+        <div className="fixed inset-0 pt-2 flex items-center justify-center bg-black bg-opacity-50" onClick={closeModal}>
           <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full" onClick={(e) => e.stopPropagation()}>
             <h2 className="text-2xl text-center font-semibold mb-4">Application Form</h2>
             <form onSubmit={sendEmail}>
