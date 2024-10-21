@@ -233,30 +233,33 @@ const Frontend: React.FC = () => {
 
       {/* Application Modal */}
       {isModalOpen && (
-  <div className="fixed inset-0 pt-24 flex items-center justify-center bg-black bg-opacity-50" onClick={closeModal}>
-    <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg max-w-md w-full mx-4" onClick={(e) => e.stopPropagation()}>
-      <h2 className="text-2xl text-center font-semibold mb-4">Application Form</h2>
+  <div className="pt-20 fixed inset-0 flex items-center justify-center bg-black bg-opacity-50" onClick={closeModal}>
+    <div className="bg-white p-6 rounded-lg shadow-lg max-w-2xl w-full mx-4" onClick={(e) => e.stopPropagation()}>
+      <h2 className="text-lg text-center font-semibold mb-4">Application Form</h2>
       <form onSubmit={sendEmail}>
-        <div className="mb-4">
-          <label className="block text-gray-700">Full Name</label>
-          <input type="text" name="fullName" required placeholder="Enter your full name" className="w-full border border-gray-300 rounded-lg p-2" value={formData.fullName} onChange={handleChange}/>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+          <div>
+            <label className="block text-gray-700">Full Name</label>
+            <input type="text" name="fullName" required placeholder="Enter your full name" className="w-full border border-gray-300 rounded-lg p-2" value={formData.fullName} onChange={handleChange}/>
+          </div>
+          <div>
+            <label className="block text-gray-700">Email Address</label>
+            <input type="email" name="email" required placeholder="Enter your email address" className="w-full border border-gray-300 rounded-lg p-2" value={formData.email} onChange={handleChange}/>
+          </div>
+          <div>
+            <label className="block text-gray-700">Phone Number</label>
+            <input type="tel" name="phone" required placeholder="Enter your phone number" className="w-full border border-gray-300 rounded-lg p-2" value={formData.phone} onChange={handleChange}/>
+          </div>
+          <div>
+            <label className="block text-gray-700">Gender</label>
+            <select name="gender" className="w-full border border-gray-300 rounded-lg p-2" value={formData.gender} onChange={handleChange}>
+              <option value="">Select Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
         </div>
-        <div className="mb-4">
-          <label className="block text-gray-700">Email Address</label>
-          <input type="email" name="email" required placeholder="Enter your email address" className="w-full border border-gray-300 rounded-lg p-2" value={formData.email} onChange={handleChange}/>
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700">Phone Number</label>
-          <input type="tel" name="phone" required placeholder="Enter your phone number" className="w-full border border-gray-300 rounded-lg p-2" value={formData.phone} onChange={handleChange}/>
-        </div>
-        <div className="mb-4">
-          <label className="block text-gray-700">Gender</label>
-          <select name="gender" className="w-full border border-gray-300 rounded-lg p-2" value={formData.gender} onChange={handleChange}>
-            <option value="">Select Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-        </div>
+
         <div className="mb-4">
           <label className="block text-gray-700">Have you completed high school?</label>
           <select name="highschool" className="w-full border border-gray-300 rounded-lg p-2" value={formData.highschool} onChange={handleChange}>
@@ -285,7 +288,7 @@ const Frontend: React.FC = () => {
           <textarea name="feedback" required placeholder="...." className="w-full border border-gray-300 rounded-lg p-2" rows={3} value={formData.feedback} onChange={handleChange}></textarea>
         </div>
         <div className="flex justify-center mb-4">
-          <button type="submit" className="bg-blue-600 text-white px-4 py-3 rounded-lg">
+          <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded-lg">
             Submit Application
           </button>
         </div>
