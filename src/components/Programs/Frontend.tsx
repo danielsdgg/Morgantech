@@ -233,67 +233,70 @@ const Frontend: React.FC = () => {
 
       {/* Application Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 pt-6 flex items-center justify-center bg-black bg-opacity-50" onClick={closeModal}>
-          <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full" onClick={(e) => e.stopPropagation()}>
-            <h2 className="text-2xl text-center font-semibold mb-4">Application Form</h2>
-            <form onSubmit={sendEmail}>
-              <div className="mb-4">
-                <label className="block text-gray-700">Full Name</label>
-                <input type="text" name="fullName" required placeholder="Enter your full name" className="w-full border border-gray-300 rounded-lg p-2" value={formData.fullName} onChange={handleChange}/>
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700">Email Address</label>
-                <input type="email" name="email" required placeholder="Enter your email address" className="w-full border border-gray-300 rounded-lg p-2" value={formData.email} onChange={handleChange}/>
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700">Phone Number</label>
-                <input type="tel" name="phone" required placeholder="Enter your phone number" className="w-full border border-gray-300 rounded-lg p-2" value={formData.phone} onChange={handleChange}/>
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700">Gender</label>
-                <select name="gender" className="w-full border border-gray-300 rounded-lg p-2" value={formData.gender} onChange={handleChange}>
-                  <option value="">Select Gender</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                </select>
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700">Have you completed high school?</label>
-                <select name="highschool" className="w-full border border-gray-300 rounded-lg p-2" value={formData.highschool} onChange={handleChange}>
-                  <option value="">Select</option>
-                  <option value="yes">Yes</option>
-                  <option value="no">No</option>
-                </select>
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700">Course Of Study</label>
-                <select name="course" className="w-full border border-gray-300 rounded-lg p-2 bg-gray-200 cursor-not-allowed" value={formData.course} onChange={handleChange} disabled>
-                  <option value="">Select a course</option>
-                  <option value="Web-design">Web-design</option>
-                  <option value="Cyber Security">Cyber Security</option>
-                  <option value="Frontend Programming">Frontend Programming</option>
-                  <option value="Backend Programming">Backend Programming</option>
-                  <option value="Graphics Design">Graphics Design</option>
-                  <option value="Accounting Packages">Accounting Packages</option>
-                  <option value="Video editing/Motion graphics">Video editing/Motion graphics</option>
-                  <option value="Android Programming">Android Programming</option>
-                  <option value="Computer Packages">Computer Packages</option>
-                </select>
-              </div>
-              <div className="mb-4">
-                <label className="block text-gray-700">How did you hear about Morgan Technical Training?*</label>
-                <textarea name="feedback" required placeholder="...." className="w-full border border-gray-300 rounded-lg p-2" rows={3} value={formData.feedback} onChange={handleChange}></textarea>
-              </div>
-              <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded-lg">
-                Submit Application
-              </button>
-            </form>
-            <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-800" onClick={closeModal}>
-              &times;
-            </button>
-          </div>
+  <div className="fixed inset-0 pt-24 flex items-center justify-center bg-black bg-opacity-50" onClick={closeModal}>
+    <div className="bg-white p-6 md:p-8 rounded-lg shadow-lg max-w-md w-full mx-4" onClick={(e) => e.stopPropagation()}>
+      <h2 className="text-2xl text-center font-semibold mb-4">Application Form</h2>
+      <form onSubmit={sendEmail}>
+        <div className="mb-4">
+          <label className="block text-gray-700">Full Name</label>
+          <input type="text" name="fullName" required placeholder="Enter your full name" className="w-full border border-gray-300 rounded-lg p-2" value={formData.fullName} onChange={handleChange}/>
         </div>
-      )}
+        <div className="mb-4">
+          <label className="block text-gray-700">Email Address</label>
+          <input type="email" name="email" required placeholder="Enter your email address" className="w-full border border-gray-300 rounded-lg p-2" value={formData.email} onChange={handleChange}/>
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">Phone Number</label>
+          <input type="tel" name="phone" required placeholder="Enter your phone number" className="w-full border border-gray-300 rounded-lg p-2" value={formData.phone} onChange={handleChange}/>
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">Gender</label>
+          <select name="gender" className="w-full border border-gray-300 rounded-lg p-2" value={formData.gender} onChange={handleChange}>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">Have you completed high school?</label>
+          <select name="highschool" className="w-full border border-gray-300 rounded-lg p-2" value={formData.highschool} onChange={handleChange}>
+            <option value="">Select</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">Course Of Study</label>
+          <select name="course" className="w-full border border-gray-300 rounded-lg p-2 bg-gray-200 cursor-not-allowed" value={formData.course} onChange={handleChange} disabled>
+            <option value="">Select a course</option>
+            <option value="Web-design">Web-design</option>
+            <option value="Cyber Security">Cyber Security</option>
+            <option value="Frontend Programming">Frontend Programming</option>
+            <option value="Backend Programming">Backend Programming</option>
+            <option value="Graphics Design">Graphics Design</option>
+            <option value="Accounting Packages">Accounting Packages</option>
+            <option value="Video editing/Motion graphics">Video editing/Motion graphics</option>
+            <option value="Android Programming">Android Programming</option>
+            <option value="Computer Packages">Computer Packages</option>
+          </select>
+        </div>
+        <div className="mb-4">
+          <label className="block text-gray-700">How did you hear about Morgan Technical Training?*</label>
+          <textarea name="feedback" required placeholder="...." className="w-full border border-gray-300 rounded-lg p-2" rows={3} value={formData.feedback} onChange={handleChange}></textarea>
+        </div>
+        <div className="flex justify-center mb-4">
+          <button type="submit" className="bg-blue-600 text-white px-4 py-3 rounded-lg">
+            Submit Application
+          </button>
+        </div>
+      </form>
+      <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-800" onClick={closeModal}>
+        &times;
+      </button>
+    </div>
+  </div>
+)}
+
       <Footer />
     </>
   );
