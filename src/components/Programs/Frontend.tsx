@@ -233,7 +233,7 @@ const Frontend: React.FC = () => {
 
       {/* Application Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 pt-2 flex items-center justify-center bg-black bg-opacity-50" onClick={closeModal}>
+        <div className="fixed inset-0 pt-6 flex items-center justify-center bg-black bg-opacity-50" onClick={closeModal}>
           <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full" onClick={(e) => e.stopPropagation()}>
             <h2 className="text-2xl text-center font-semibold mb-4">Application Form</h2>
             <form onSubmit={sendEmail}>
