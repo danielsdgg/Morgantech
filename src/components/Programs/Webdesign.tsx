@@ -76,7 +76,7 @@ const Webdesign: React.FC = () => {
       <div className={`bg-white text-gray-800 ${isModalOpen ? 'blur-lg' : ''}`}>
         {/* Hero Section */}
         <section className="bg-cover bg-center h-[500px] relative"
-          style={{backgroundImage: "url('https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/60108162d58c7f1b92c2b769_6002086f72b7275ddf01dde6_web-design-principles.jpeg')",}}>
+          style={{backgroundImage: "url('https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/60108162d58c7f1b92c2b769_6002086f72b7275ddf01dde6_web-design-principles.jpeg')", backgroundAttachment: 'fixed' }}>
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="container mx-auto h-full flex flex-col justify-center items-center text-center relative z-10">
             <h1 className="text-white text-5xl font-bold mb-4">Web Design BootCamp</h1>

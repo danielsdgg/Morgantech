@@ -7,6 +7,23 @@ import { Link, NavLink } from 'react-router-dom';
 
 
 const Home = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // Set visible to true after the component mounts
+    setVisible(true);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
     const testimonials = [
         {
           image: "https://res.cloudinary.com/ddei3mzex/image/upload/v1728998699/IMG_5230_qib0qp.jpg",
@@ -40,7 +57,7 @@ const Home = () => {
         trackMouse: true,
       });
 
-      const [visible, setVisible] = useState(false);
+      // const [visible, setVisible] = useState(false);
 
       useEffect(() => {
         const timer = setTimeout(() => {
@@ -58,42 +75,39 @@ const Home = () => {
         {/* 0 */}
 
         {/* part 1 */}
-        <section className="relative bg-gray-800 h-[700px] flex flex-col justify-center">
-          <div className="absolute inset-0">
-            <img src="https://miro.medium.com/v2/resize:fit:1400/0*7VyEZgzwUhQMeBqb" alt="Hero Background" className={`object-cover w-full h-full transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`} />
-            <div className="absolute inset-0 bg-black opacity-60"></div> 
-          </div>
+        <section className="relative bg-gray-800 h-[700px] flex flex-col justify-center overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src="https://miro.medium.com/v2/resize:fit:1400/0*7VyEZgzwUhQMeBqb"
+          alt="Hero Background"
+          className={`object-cover w-full h-full transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`, // Parallax effect
+          }}
+        />
+        <div className="absolute inset-0 bg-black opacity-60"></div>
+      </div>
 
-          <div className="container mx-auto flex flex-col items-center justify-center h-full text-center text-white relative z-10 px-4">
-            <h1 className={`text-4xl md:text-5xl font-bold text-white transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}>
-              Welcome to <span className="text-blue-500">Morgan Technical Training</span>
-            </h1>
+      <div className="container mx-auto flex flex-col items-center justify-center h-full text-center text-white relative z-10 px-4">
+        <h1 className={`text-4xl md:text-5xl font-bold text-white transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}>
+          Welcome to <span className="text-blue-500">Morgan Technical Training</span>
+        </h1>
 
-            <h2 className={`text-3xl md:text-3xl font-bold mb-4 transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'} delay-1000`}>
-              Empowering Your Digital Future
-            </h2>
+        <h2 className={`text-3xl md:text-3xl font-bold mb-4 transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'} delay-1000`}>
+          Empowering Your Digital Future
+        </h2>
 
-            <p className={`text-md md:text-lg mb-8 transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'} delay-1600`}>
-              Join us in navigating the world of technology with innovative solutions designed for your success.
-            </p>
+        <p className={`text-md md:text-lg mb-8 transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'} delay-1600`}>
+          Join us in navigating the world of technology with innovative solutions designed for your success.
+        </p>
 
-            {/* <div className="text-lg md:text-xl font-bold text-blue-500 md:pl-4 pl-2 text-shadow mb-4">
-              <ReactTyped 
-                strings={['Frontend Programming', 'Graphics Design', 'Cyber Security', 'Android Programming']} 
-                typeSpeed={120} 
-                backSpeed={140} 
-                loop 
-              />
-            </div> */}
-
-            <Link to="/courses">
-              <p className={`bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 cursor-pointer transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'} delay-1600`}>
-                Get Started
-              </p>
-            </Link>
-          </div>
-        </section>
-
+        <Link to="/courses">
+          <p className={`bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 cursor-pointer transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'} delay-1600`}>
+            Get Started
+          </p>
+        </Link>
+      </div>
+    </section>
 
 
     {/* part 2 */}
