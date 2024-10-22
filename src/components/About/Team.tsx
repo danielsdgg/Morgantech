@@ -20,8 +20,8 @@ const Team = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                     <div className="col-span-3 md:col-span-1 pt-9">
                         <div className="bg-gray-100 rounded-lg p-8 transition-colors duration-300 hover:bg-blue-500 hover:text-white">
-                            <img src="https://res.cloudinary.com/ddei3mzex/image/upload/v1716552809/1000045233_ywrlv5.jpg" className="mx-auto w-48 h-48 rounded-full mb-6" alt="pic" />
-                            <h3 className="text-xl font-semibold">Leonard</h3>
+                            <img src="https://res.cloudinary.com/ddei3mzex/image/upload/v1729591303/1000138333_m8roto.jpg" className="mx-auto w-48 h-48 rounded-full mb-6" alt="pic" />
+                            <h3 className="text-xl font-semibold">Leonard Morgan</h3>
                             <div className="mb-4">
                                 <p className="text-gray-500">Head of M.T.T</p>
                             </div>
