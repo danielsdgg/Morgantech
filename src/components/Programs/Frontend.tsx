@@ -5,6 +5,8 @@ import emailjs from 'emailjs-com'; // Import EmailJS
 
 const Frontend: React.FC = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [notification, setNotification] = useState<string | null>(null); // State for notification
+
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -40,14 +42,32 @@ const Frontend: React.FC = () => {
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault(); // Prevent default form submission
 
-    emailjs.send('service_7x3k6fq', 'template_ukr7tzl', formData, 'hC6uNYFa9xlw96bvG')
+    emailjs.send('service_7x3k6fq', 'template_fsx0o17', formData, 'hC6uNYFa9xlw96bvG')
       .then(() => {
-        alert('Application sent successfully!');
-        closeModal(); // Close modal after sending
+        setNotification('Your application was submitted successfully!'); // Show success notification
+        setFormData({
+          fullName: '',
+          email: '',
+          phone: '',
+          gender: '',
+          highschool: '',
+          course: 'Frontend Programming',
+          feedback: ''
+        });
+
+        // Hide the notification after 5 seconds
+        setTimeout(() => {
+          setNotification(null);
+        }, 5000);
       })
       .catch((error) => {
-        alert('Failed to send application. Please try again later.');
+        setNotification('Failed to send application. Please try again later.');
         console.error('EmailJS error:', error);
+
+        // Hide the notification after 5 seconds
+        setTimeout(() => {
+          setNotification(null);
+        }, 5000);
       });
   };
 
@@ -245,6 +265,14 @@ const Frontend: React.FC = () => {
       >
         &#10005;
       </button>
+
+      {/* Notification Section */}
+      {notification && (
+        <div className="mb-4 p-4 text-center bg-green-100 text-green-800 rounded-lg">
+          {notification}
+        </div>
+      )}
+      
       <h2 className="text-2xl font-bold text-center mb-6">Application Form</h2>
       <form onSubmit={sendEmail}>
   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
