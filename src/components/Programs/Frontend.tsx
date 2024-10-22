@@ -233,8 +233,8 @@ const Frontend: React.FC = () => {
 
       {/* Application Modal */}
       {isModalOpen && (
-  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 pt-20 p-4" onClick={closeModal}>
-    <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full md:max-w-lg lg:max-w-2xl mx-4" onClick={(e) => e.stopPropagation()}>
+  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 pt-20 md:pt-10" onClick={closeModal}>
+    <div className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full md:max-w-lg lg:max-w-2xl mx-4 overflow-auto max-h-screen" onClick={(e) => e.stopPropagation()}>
       <h2 className="text-lg text-center font-semibold mb-4">Application Form</h2>
       <form onSubmit={sendEmail}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
