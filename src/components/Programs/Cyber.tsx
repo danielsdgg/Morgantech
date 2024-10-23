@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../Navbar';
 import Footer from '../Footer';
 import emailjs from 'emailjs-com'
 
 const Cyber:React.FC = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // Set visible to true after the component mounts
+    setVisible(true);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [notification, setNotification] = useState<string | null>(null); 
   const [formData, setFormData] = useState({
@@ -75,15 +91,30 @@ const Cyber:React.FC = () => {
       <NavBar />
       <div className={`bg-white text-gray-800 ${isModalOpen ? 'blur-lg' : ''}`}>
         {/* Hero Section */}
-        <section className="bg-cover bg-center h-[500px] relative" style={{ backgroundImage: "url('https://png.pngtree.com/thumb_back/fh260/background/20210828/pngtree-cyber-security-data-dark-blue-light-effect-abstract-background-image_771333.jpg')" }}>
+        <section className="relative bg-gray-800 h-[700px] flex flex-col justify-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+          src="https://png.pngtree.com/thumb_back/fh260/background/20210828/pngtree-cyber-security-data-dark-blue-light-effect-abstract-background-image_771333.jpg"
+          alt="Hero Background"
+          className={`object-cover w-full h-full transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`, // Parallax effect
+          }}/>
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="container mx-auto h-full flex flex-col justify-center items-center text-center relative z-10">
-            <h1 className="text-white text-5xl font-bold mb-4">Cyber Security BootCamp</h1>
-            <p className="text-white text-lg mb-8">Gain the skills needed to protect and secure digital information</p>
-            <button onClick={openModal} className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 text-lg">
-              Apply Now
-            </button>
           </div>
+          <div className="container mx-auto flex flex-col items-center justify-center h-full text-center text-white relative z-10 px-4">
+        <h1 className={`text-4xl md:text-5xl font-bold transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}>
+        Cyber Security BootCamp
+        </h1>
+
+        <p className={`text-md md:text-lg mb-8 transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'} delay-1000`}>
+        Gain the skills needed to protect and secure digital information
+        </p>
+
+        <button onClick={openModal} className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 text-lg">
+          Apply Now
+        </button>
+      </div>
         </section>
 
         {/* ongoing intake */}

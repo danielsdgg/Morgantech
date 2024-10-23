@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../Navbar';
 import Footer from '../Footer';
 import emailjs from 'emailjs-com'
 
 const Webdesign: React.FC = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // Set visible to true after the component mounts
+    setVisible(true);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [notification, setNotification] = useState<string | null>(null); 
   const [formData, setFormData] = useState({
@@ -74,20 +90,35 @@ const Webdesign: React.FC = () => {
     <>
       <NavBar />
       <div className={`bg-white text-gray-800 ${isModalOpen ? 'blur-lg' : ''}`}>
-        {/* Hero Section */}
-        <section className="bg-cover bg-center h-[500px] relative"
-          style={{backgroundImage: "url('https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/60108162d58c7f1b92c2b769_6002086f72b7275ddf01dde6_web-design-principles.jpeg')", backgroundAttachment: 'fixed' }}>
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="container mx-auto h-full flex flex-col justify-center items-center text-center relative z-10">
-            <h1 className="text-white text-5xl font-bold mb-4">Web Design BootCamp</h1>
-            <p className="text-white text-lg mb-8">
-              Master the art of web design and create stunning websites from scratch.
-            </p>
-            <button onClick={openModal} className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 text-lg">
-              Apply Now
-            </button>
-          </div>
-        </section>
+{/* Hero Section */}
+<section className="relative bg-gray-800 h-[700px] flex flex-col justify-center overflow-hidden">
+      <div className="absolute inset-0">
+        <img
+          src="https://res.cloudinary.com/ddei3mzex/image/upload/v1729598578/webdesign2_mfmqyo.jpg"
+          alt="Hero Background"
+          className={`object-cover w-full h-full transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`, // Parallax effect
+          }}
+        />
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+      </div>
+
+      <div className="container mx-auto flex flex-col items-center justify-center h-full text-center text-white relative z-10 px-4">
+        <h1 className={`text-4xl md:text-5xl font-bold transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}>
+          Web Design BootCamp
+        </h1>
+
+        <p className={`text-md md:text-lg mb-8 transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'} delay-1000`}>
+          Master the art of web design and create stunning websites from scratch.
+        </p>
+
+        <button onClick={openModal} className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 text-lg">
+          Apply Now
+        </button>
+      </div>
+    </section>
+
 
         {/* ongoing intake */}
         <div className="w-full bg-blue-900 text-orange-400 py-16 px-4 text-center md:text-3xl sm:text-2xl text-1xl">
@@ -134,7 +165,7 @@ const Webdesign: React.FC = () => {
                 <li>No prior programming knowledge is required!</li>
               </ul>
             </div>
-            <img className="w-[700px] mx-auto rounded-3xl my-4" src="https://designsvalley.com/wp-content/uploads/2023/10/what-is-web-design.png"
+            <img className="w-[700px] mx-auto rounded-3xl my-4" src="https://res.cloudinary.com/ddei3mzex/image/upload/v1729598576/webdesign1_lswkqt.jpg"
             alt="web-design"/>
           </div>
         </div>

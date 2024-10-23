@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../Navbar';
 import Footer from '../Footer';
 import emailjs from 'emailjs-com'
 
 const VideoEditing: React.FC = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // Set visible to true after the component mounts
+    setVisible(true);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [notification, setNotification] = useState<string | null>(null); 
   const [formData, setFormData] = useState({
@@ -75,19 +91,31 @@ const VideoEditing: React.FC = () => {
       <NavBar />
       <div className={`bg-white text-gray-800 ${isModalOpen ? 'blur-lg' : ''}`}>
         {/* Hero Section */}
-        <section
-          className="bg-cover bg-center h-[500px] relative"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1513377888088-ef53d7d3bbc8?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHZpZGVvJTIwZWRpdGluZ3xlbnwwfHx8fHw%3D')",}}>
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="container mx-auto h-full flex flex-col justify-center items-center text-center relative z-10">
-            <h1 className="text-white text-5xl font-bold mb-4">Video Editing & Motion Graphics Course</h1>
-            <p className="text-white text-lg mb-8">
-              Become a master in video editing and motion graphics to create professional-level visual content.
-            </p>
-            <button onClick={openModal} className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 text-lg">
-              Apply Now
-            </button>
+        <section className="relative bg-gray-800 h-[700px] flex flex-col justify-center overflow-hidden">
+          <div className="absolute inset-0">
+          <img
+          src="https://res.cloudinary.com/ddei3mzex/image/upload/v1729599018/videoediting3_nw8sbu.webp"
+          alt="Hero Background"
+          className={`object-cover w-full h-full transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`, // Parallax effect
+          }}
+        />
+            <div className="absolute inset-0 bg-black opacity-50"></div>
           </div>
+          <div className="container mx-auto flex flex-col items-center justify-center h-full text-center text-white relative z-10 px-4">
+        <h1 className={`text-4xl md:text-5xl font-bold transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}>
+        Video Editing & Motion Graphics Course
+        </h1>
+
+        <p className={`text-md md:text-lg mb-8 transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'} delay-1000`}>
+        Become a master in video editing and motion graphics to create professional-level visual content.
+        </p>
+
+        <button onClick={openModal} className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 text-lg">
+          Apply Now
+        </button>
+      </div>
         </section>
 
         {/* ongoing intake */}
@@ -142,7 +170,7 @@ const VideoEditing: React.FC = () => {
               </ul>
             </div>
             <img className="w-[700px] mx-auto rounded-3xl my-4"
-            src="https://images.unsplash.com/photo-1636971819476-aa41dc3db0d0?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dmlkZW8lMjBlZGl0aW5nfGVufDB8fDB8fHww"
+            src="https://res.cloudinary.com/ddei3mzex/image/upload/v1729598578/webdesign2_mfmqyo.jpg"
             alt="motion-graphics"/>
           </div>
         </div>
@@ -179,7 +207,7 @@ const VideoEditing: React.FC = () => {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Course Duration</h2>
               <p className="text-lg md:text-xl text-gray-700">
-                Our Video Editing & Motion Graphics Bootcamp spans 12 weeks, offering hands-on training with industry-standard software.
+                Our Video Editing & Motion Graphics Bootcamp spans 3months, offering hands-on training with industry-standard software.
               </p>
             </div>
 
@@ -190,12 +218,12 @@ const VideoEditing: React.FC = () => {
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Full Payment</h3>
                   <p className="text-gray-600 mb-4">Pay upfront and enjoy a 10% discount.</p>
-                  <p className="text-3xl font-bold text-gray-800">KSH 70,000</p>
+                  <p className="text-3xl font-bold text-gray-800">KSH 27,000</p>
                 </div>
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Installment Plan</h3>
                   <p className="text-gray-600 mb-4">Pay in 3 easy installments during the course period.</p>
-                  <p className="text-3xl font-bold text-gray-800">KSH 75,000</p>
+                  <p className="text-3xl font-bold text-gray-800">KSH 30,000</p>
                 </div>
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Scholarships</h3>

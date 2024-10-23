@@ -1,10 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../Navbar';
 import Footer from '../Footer';
 import emailjs from 'emailjs-com';
 
 
 const Accounts: React.FC = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // Set visible to true after the component mounts
+    setVisible(true);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [notification, setNotification] = useState<string | null>(null); 
   const [formData, setFormData] = useState({
@@ -76,19 +93,29 @@ const Accounts: React.FC = () => {
       <NavBar />
       <div className={`bg-white text-gray-800 ${isModalOpen ? 'blur-lg' : ''}`}>
         {/* Hero Section */}
-        <section
-          className="bg-cover bg-center h-[500px] relative"
-          style={{ backgroundImage: "url('https://www.freshbooks.com/wp-content/uploads/2022/02/financial-accounting-1.jpg')",}}>
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="container mx-auto h-full flex flex-col justify-center items-center text-center relative z-10">
-            <h1 className="text-white text-5xl font-bold mb-4">Accounting Course</h1>
-            <p className="text-white text-lg mb-8">
-              Master the essentials of accounting with QuickBooks and Sage 50
-            </p>
-            <button onClick={openModal} className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 text-lg">
-              Apply Now
-            </button>
-          </div>
+        <section className="relative bg-gray-800 h-[700px] flex flex-col justify-center overflow-hidden">
+          <div className="absolute inset-0">
+            <img src='https://www.freshbooks.com/wp-content/uploads/2022/02/financial-accounting-1.jpg'
+            alt="Hero Background"
+            className={`object-cover w-full h-full transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}
+            style={{
+              transform: `translateY(${scrollY * 0.5}px)`, // Parallax effect
+            }}/>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+      </div>
+      <div className="container mx-auto flex flex-col items-center justify-center h-full text-center text-white relative z-10 px-4">
+        <h1 className={`text-4xl md:text-5xl font-bold transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}>
+        Accounting Course
+        </h1>
+
+        <p className={`text-md md:text-lg mb-8 transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'} delay-1000`}>
+        Master the essentials of accounting with QuickBooks and Sage 50
+        </p>
+
+        <button onClick={openModal} className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 text-lg">
+          Apply Now
+        </button>
+      </div>
         </section>
 
         {/* Ongoing Intake */}
@@ -177,7 +204,7 @@ const Accounts: React.FC = () => {
                 Course Duration
               </h2>
               <p className="text-lg md:text-xl text-gray-700">
-                Our Accounting Bootcamp lasts for 12 weeks, offering in-depth
+                Our Accounting Course lasts for 4 weeks, offering in-depth
                 training and hands-on experience in QuickBooks and Sage 50.
               </p>
             </div>
@@ -191,12 +218,12 @@ const Accounts: React.FC = () => {
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Full Payment</h3>
                   <p className="text-gray-600 mb-4">Pay upfront and enjoy a 10% discount.</p>
-                  <p className="text-3xl font-bold text-gray-800">KSH 35,000</p>
+                  <p className="text-3xl font-bold text-gray-800">KSH 13,000</p>
                 </div>
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Installment Plan</h3>
-                  <p className="text-gray-600 mb-4">Pay in 3 installments throughout the course duration.</p>
-                  <p className="text-3xl font-bold text-gray-800">KSH 40,000</p>
+                  <p className="text-gray-600 mb-4">16,000</p>
+                  <p className="text-3xl font-bold text-gray-800"></p>
                 </div>
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Scholarships</h3>

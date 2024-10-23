@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../Navbar';
 import Footer from '../Footer';
 import emailjs from 'emailjs-com'; // Import EmailJS
 
 const Frontend: React.FC = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // Set visible to true after the component mounts
+    setVisible(true);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [notification, setNotification] = useState<string | null>(null); // State for notification
 
@@ -76,21 +92,31 @@ const Frontend: React.FC = () => {
       <NavBar />
       <div className={`bg-white text-gray-800 ${isModalOpen ? 'blur-lg' : ''}`}>
         {/* Hero Section */}
-        <section className="bg-cover bg-center h-[500px] relative"
-          style={{ backgroundImage: "url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZyb250JTIwZW5kfGVufDB8fDB8fHww')",}}>
+        <section className="relative bg-gray-800 h-[700px] flex flex-col justify-center overflow-hidden">
+          <div className="absolute inset-0">
+          <img
+          src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fGZyb250JTIwZW5kfGVufDB8fDB8fHww"
+          alt="Hero Background"
+          className={`object-cover w-full h-full transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`, // Parallax effect
+          }}/>
           <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="container mx-auto h-full flex flex-col justify-center items-center text-center relative z-10">
-            <h1 className="text-white text-5xl font-bold mb-4">
-              Frontend Programming BootCamp
-            </h1>
-            <p className="text-white text-lg mb-8">
-              Master frontend development skills to build stunning web applications
-            </p>
-            <button
-              onClick={openModal} className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 text-lg">
-              Apply Now
-            </button>
           </div>
+
+          <div className="container mx-auto flex flex-col items-center justify-center h-full text-center text-white relative z-10 px-4">
+        <h1 className={`text-4xl md:text-5xl font-bold transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}>
+        Frontend Programming BootCamp
+        </h1>
+
+        <p className={`text-md md:text-lg mb-8 transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'} delay-1000`}>
+        Master frontend development skills to build stunning web applications
+        </p>
+
+        <button onClick={openModal} className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 text-lg">
+          Apply Now
+        </button>
+      </div>
         </section>
 
         {/* Ongoing intake */}
@@ -233,9 +259,9 @@ const Frontend: React.FC = () => {
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Scholarship</h3>
                   <p className="text-gray-600 mb-4">
-                    Scholarships are available for qualifying applicants.
+                    Scholarships are currently not available for this course.
                   </p>
-                  <p className="text-3xl font-bold text-gray-800">KSH 50,000</p>
+                  <p className="text-3xl font-bold text-gray-800"></p>
                 </div>
               </div>
             </div>
@@ -272,7 +298,7 @@ const Frontend: React.FC = () => {
           {notification}
         </div>
       )}
-      
+
       <h2 className="text-2xl font-bold text-center mb-6">Application Form</h2>
       <form onSubmit={sendEmail}>
   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">

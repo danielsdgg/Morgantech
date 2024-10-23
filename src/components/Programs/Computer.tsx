@@ -1,9 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import NavBar from '../Navbar';
 import Footer from '../Footer';
 import emailjs from 'emailjs-com'
 
 const Computer: React.FC = () => {
+  const [scrollY, setScrollY] = useState(0);
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // Set visible to true after the component mounts
+    setVisible(true);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [notification, setNotification] = useState<string | null>(null); 
   const [formData, setFormData] = useState({
@@ -75,19 +91,30 @@ const Computer: React.FC = () => {
       <NavBar />
       <div className={`bg-white text-gray-800 ${isModalOpen ? 'blur-lg' : ''}`}>
         {/* Hero Section */}
-        <section
-          className="bg-cover bg-center h-[500px] relative"
-          style={{ backgroundImage: "url('https://png.pngtree.com/thumb_back/fw800/background/20231006/pngtree-computerized-seo-background-exploring-web-development-programming-code-and-app-development-image_13515246.png')",}}>
-          <div className="absolute inset-0 bg-black opacity-50"></div>
-          <div className="container mx-auto h-full flex flex-col justify-center items-center text-center relative z-10">
-            <h1 className="text-white text-5xl font-bold mb-4">Computer Packages Course</h1>
-            <p className="text-white text-lg mb-8">
-              Master essential computer skills and software applications to enhance your productivity.
-            </p>
-            <button onClick={openModal} className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 text-lg">
-              Apply Now
-            </button>
+        <section className="relative bg-gray-800 h-[700px] flex flex-col justify-center overflow-hidden">
+          <div className="absolute inset-0">
+          <img
+          src='https://png.pngtree.com/thumb_back/fw800/background/20231006/pngtree-computerized-seo-background-exploring-web-development-programming-code-and-app-development-image_13515246.png'
+          alt="Hero Background"
+          className={`object-cover w-full h-full transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}
+          style={{
+            transform: `translateY(${scrollY * 0.5}px)`, // Parallax effect
+          }}/>
+            <div className="absolute inset-0 bg-black opacity-50"></div>
           </div>
+          <div className="container mx-auto flex flex-col items-center justify-center h-full text-center text-white relative z-10 px-4">
+        <h1 className={`text-4xl md:text-5xl font-bold transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'}`}>
+        Computer Packages Course
+        </h1>
+
+        <p className={`text-md md:text-lg mb-8 transition-opacity duration-1000 ease-in ${visible ? 'opacity-100' : 'opacity-0'} delay-1000`}>
+        Master essential computer skills and software applications to enhance your productivity.
+        </p>
+
+        <button onClick={openModal} className="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 text-lg">
+          Apply Now
+        </button>
+      </div>
         </section>
 
         {/* ongoing intake */}
@@ -169,7 +196,7 @@ const Computer: React.FC = () => {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Course Duration</h2>
               <p className="text-lg md:text-xl text-gray-700">
-                The Computer Packages Bootcamp runs for 6 weeks, providing essential training for everyday computer tasks.
+                The Computer Packages runs for 8 weeks, providing essential training for everyday computer tasks.
               </p>
             </div>
 
@@ -180,12 +207,12 @@ const Computer: React.FC = () => {
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Full Payment</h3>
                   <p className="text-gray-600 mb-4">Pay upfront and enjoy a 10% discount.</p>
-                  <p className="text-3xl font-bold text-gray-800">KSH 25,000</p>
+                  <p className="text-3xl font-bold text-gray-800">KSH 9,000</p>
                 </div>
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Installment Plan</h3>
                   <p className="text-gray-600 mb-4">Pay in 2 easy installments during the course period.</p>
-                  <p className="text-3xl font-bold text-gray-800">KSH 28,000</p>
+                  <p className="text-3xl font-bold text-gray-800">KSH 12,000</p>
                 </div>
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Scholarships</h3>
