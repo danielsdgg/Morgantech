@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NavBar from '../Navbar';
 import Footer from '../Footer';
 import emailjs from 'emailjs-com'; // Import EmailJS
+import ScrollButton from '../ScrollButton';
 
 const Frontend: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -235,7 +236,7 @@ const Frontend: React.FC = () => {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Course Duration</h2>
               <p className="text-lg md:text-xl text-gray-700">
-                Our Frontend Programming Bootcamp spans 12 weeks of intensive, hands-on training,
+                Our Frontend Programming Bootcamp spans 20 weeks of intensive, hands-on training,
                 preparing you to thrive in the tech industry.
               </p>
             </div>
@@ -423,8 +424,7 @@ const Frontend: React.FC = () => {
     </div>
   </div>
 )}
-
-
+<ScrollButton/>
       <Footer />
     </>
   );

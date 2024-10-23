@@ -3,6 +3,7 @@ import NavBar from './Navbar'
 import Footer from './Footer'
 // import logo from '../assets/morgan_logo.png'
 import { Link } from 'react-router-dom'
+import ScrollButton from './ScrollButton'
 
 const Courses:React.FC = () => {
   return (
@@ -129,7 +130,9 @@ const Courses:React.FC = () => {
       </div>
     </div>
   </div>
+
 </section>
+<ScrollButton/>
 
     <Footer/>
     </>

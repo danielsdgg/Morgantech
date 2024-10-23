@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NavBar from '../Navbar';
 import Footer from '../Footer';
 import emailjs from 'emailjs-com'
+import ScrollButton from '../ScrollButton';
 
 const Computer: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -378,7 +379,7 @@ const Computer: React.FC = () => {
     </div>
   </div>
 )}
-
+<ScrollButton/>
       <Footer />
     </>
   );

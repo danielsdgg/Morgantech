@@ -3,6 +3,7 @@ import NavBar from './Navbar'
 import Footer from './Footer'
 import { useSwipeable } from "react-swipeable";
 import { Link, NavLink } from 'react-router-dom';
+import ScrollButton from './ScrollButton';
 // import { ReactTyped } from 'react-typed';
 
 
@@ -265,7 +266,7 @@ const Home = () => {
     </section>
 
 
-
+    <ScrollButton/>
     </div>
     <Footer />
     </>

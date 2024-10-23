@@ -54,7 +54,7 @@ const Contact: React.FC = () => {
           <div className="flex justify-center items-center">
             <img
               className="w-[800px] h-[500px] rounded-3xl shadow-lg"
-              src="https://global.ariseplay.com/amg/www.thisdaylive.com/uploads/ccb429b9-kids-that-code.jpg"
+              src="https://africa-school-bucket3.s3.amazonaws.com/static/img/school/2023/07/12/admike.png"
               alt="imagery"/>
           </div>
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import NavBar from '../Navbar';
 import Footer from '../Footer';
 import emailjs from 'emailjs-com';
+import ScrollButton from '../ScrollButton';
 
 
 const Accounts: React.FC = () => {
@@ -391,7 +392,7 @@ const Accounts: React.FC = () => {
     </div>
   </div>
 )}
-
+<ScrollButton/>
       <Footer />
     </>
   );
