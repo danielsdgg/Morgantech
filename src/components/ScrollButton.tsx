@@ -1,4 +1,3 @@
-// ScrollButton.tsx
 import { useState, useEffect } from 'react';
 import { FaArrowUp, FaArrowDown } from 'react-icons/fa'; // Using react-icons for arrows
 
@@ -12,8 +11,8 @@ const ScrollButton = () => {
       const scrollPosition = window.scrollY;
       const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
       
-      setShowUpButton(scrollPosition > 100); // Show "up" button after scrolling down
-      setShowDownButton(scrollPosition < windowHeight - 100); // Show "down" button when not at bottom
+      setShowUpButton(scrollPosition > 100); 
+      setShowDownButton(scrollPosition < windowHeight - 100); 
     };
 
     window.addEventListener('scroll', handleScroll);

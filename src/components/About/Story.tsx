@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from '../Navbar';
 import Footer from '../Footer';
+import ScrollButton from '../ScrollButton';
 
 const Story: React.FC = () => {
   return (
@@ -70,6 +71,7 @@ const Story: React.FC = () => {
       <div className='w-full bg-gray-800 text-white py-24 px-2 text-center md:text-5xl sm:text-3xl text-3xl'>
         <p>Begin your story with us today</p>
         </div>
+        <ScrollButton/>
       <Footer />
     </>
   );

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import NavBar from './Navbar'
 import Footer from './Footer'
 // import logo from '../assets/morgan_logo.png'
@@ -6,22 +6,71 @@ import { Link } from 'react-router-dom'
 import ScrollButton from './ScrollButton'
 
 const Courses:React.FC = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const section = document.getElementById('next-step-section');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          } else {
+            setIsVisible(false); // To re-trigger animation when scrolling back up
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) observer.unobserve(section);
+    };
+  }, []);
   return (
     <>
     <NavBar/>
     {/* intro to courses */}
-    <div className='w-full bg-gray-300 py-16 px-16'>
-        <div className='max-w-[100%] mx-auto grid md:grid-cols-2'>
-            <div className='flex flex-col justify-center text-black'>
-                <h2 className='font-semibold py-2 md:text-6xl sm:text-3xl text-2xl'>Take the next step:</h2>
-                <p>
-                At Morgan Technical, we offer a diverse range of courses designed to equip students with the skills and knowledge needed for success in today's competitive world. Our programs span various disciplines, including Business, Computer Science, Engineering, and the Arts, each taught by experienced faculty. With a focus on both theoretical understanding and practical application, our courses are tailored to meet industry demands. Join us and take the first step toward a fulfilling career through our comprehensive and innovative curriculum.
-                </p>
-            </div>
-            <img className='w-[500px] mx-auto rounded-3xl my-4' src="https://res.cloudinary.com/ddei3mzex/image/upload/v1729158010/crest_x1gutu.jpg" alt='Logo'/>
-
+    <div id="next-step-section" className='w-full bg-gray-300 py-16 px-16'>
+      <div className='max-w-[100%] mx-auto grid md:grid-cols-2'>
+        {/* Text Content with Animation */}
+        <div
+          className={`flex flex-col justify-center text-black transition-transform duration-1000 ease-out ${
+            isVisible ? 'translate-x-0 opacity-100' : '-translate-x-60 opacity-0'
+          }`}
+        >
+          <h2 className='font-semibold py-2 md:text-6xl sm:text-3xl text-2xl'>
+            Take the next step:
+          </h2>
+          <p>
+            At Morgan Technical, we offer a diverse range of courses designed to
+            equip students with the skills and knowledge needed for success in
+            today's competitive world. Our programs span various disciplines,
+            including Business, Computer Science, Engineering, and the Arts,
+            each taught by experienced faculty. With a focus on both theoretical
+            understanding and practical application, our courses are tailored to
+            meet industry demands. Join us and take the first step toward a
+            fulfilling career through our comprehensive and innovative
+            curriculum.
+          </p>
         </div>
+
+        {/* Image with Animation */}
+        <img
+          className={`w-[500px] mx-auto rounded-3xl my-4 transition-transform duration-1000 ease-out delay-200 ${
+            isVisible ? 'translate-x-0 opacity-100' : 'translate-x-60 opacity-0'
+          }`}
+          src="https://res.cloudinary.com/ddei3mzex/image/upload/v1729158010/crest_x1gutu.jpg"
+          alt='Logo'
+        />
+      </div>
     </div>
+
     {/* list of courses */}
     <section className="bg-gray-100 py-16">
   <div className="container mx-auto px-4">
@@ -130,8 +179,8 @@ const Courses:React.FC = () => {
       </div>
     </div>
   </div>
-
 </section>
+
 <ScrollButton/>
 
     <Footer/>

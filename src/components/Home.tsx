@@ -12,6 +12,30 @@ const Home = () => {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setVisible(true);
+          }
+        });
+      },
+      { threshold: 0.1 } // Adjust threshold to control when animation triggers
+    );
+
+    const section = document.querySelector('#top-courses-section');
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     
     window.addEventListener('scroll', handleScroll);
@@ -264,7 +288,6 @@ const Home = () => {
         </div>
       </div>
     </section>
-
 
     <ScrollButton/>
     </div>
