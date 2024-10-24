@@ -190,7 +190,7 @@ const Backend = () => {
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Course Duration</h2>
             <p className="text-lg md:text-xl text-gray-700">
-              Our Backend Programming Bootcamp spans 15 weeks of immersive, hands-on learning designed to build your backend expertise.
+              Our Backend Programming Bootcamp spans 21 weeks of immersive, hands-on learning designed to build your backend expertise.
             </p>
           </div>
           {/* Payment Plans */}
