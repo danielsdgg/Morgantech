@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import emailjs from 'emailjs-com';
+import { motion } from 'framer-motion';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -51,15 +52,26 @@ const Contact: React.FC = () => {
       <div className="w-full h-auto bg-gray-100 py-28 px-12">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
           {/* Image Section */}
-          <div className="flex justify-center items-center">
+          <motion.div
+            className="flex justify-center items-center"
+            initial={{ opacity: 0, x: -50 }} // Initial state
+            animate={{ opacity: 1, x: 0 }} // Final state
+            transition={{ duration: 0.5 }} // Animation duration
+          >
             <img
               className="w-[800px] h-[500px] rounded-3xl shadow-lg"
               src="https://africa-school-bucket3.s3.amazonaws.com/static/img/school/2023/07/12/admike.png"
-              alt="imagery"/>
-          </div>
+              alt="imagery"
+            />
+          </motion.div>
 
           {/* Form Section */}
-          <div className="flex justify-center items-center">
+          <motion.div
+            className="flex justify-center items-center"
+            initial={{ opacity: 0, x: 50 }} // Initial state
+            animate={{ opacity: 1, x: 0 }} // Final state
+            transition={{ duration: 0.5 }} // Animation duration
+          >
             <form onSubmit={sendEmail} className="w-full bg-white p-8 rounded-lg shadow-lg">
               <div className="pb-8 text-center">
                 <h2 className="text-3xl font-bold text-gray-800 mb-4">Get in Touch</h2>
@@ -121,7 +133,7 @@ const Contact: React.FC = () => {
                 </button>
               </div>
             </form>
-          </div>
+          </motion.div>
         </div>
       </div>
 

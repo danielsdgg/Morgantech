@@ -223,8 +223,8 @@ const Accounts: React.FC = () => {
                 </div>
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Installment Plan</h3>
-                  <p className="text-gray-600 mb-4">16,000</p>
-                  <p className="text-3xl font-bold text-gray-800"></p>
+                  <p className="text-gray-600 mb-4">Pay in 3 easy installments during the course period.</p>
+                  <p className="text-3xl font-bold text-gray-800">16,000</p>
                 </div>
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Scholarships</h3>
