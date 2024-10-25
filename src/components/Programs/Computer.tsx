@@ -184,7 +184,7 @@ const Computer: React.FC = () => {
                 <li>Research Skills and Information Evaluation</li>
               </ul>
               <div className="relative w-full h-0 pb-56">
-                <video className="absolute top-0 left-0 w-full h-full border-4 border-gray-300" controls src="https://www.w3schools.com/html/mov_bbb.mp4">
+                <video className="absolute top-0 left-0 w-full h-full border-4 border-gray-300" controls src="https://res.cloudinary.com/ddei3mzex/video/upload/v1729846136/Computer_Basics__What_Is_a_Computer__d5k69i.mp4">
                 </video>
               </div>
             </div>

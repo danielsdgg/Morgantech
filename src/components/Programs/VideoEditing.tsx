@@ -195,7 +195,7 @@ const VideoEditing: React.FC = () => {
                 <video
                   className="absolute top-0 left-0 w-full h-full border-4 border-gray-300"
                   controls
-                  src="https://res.cloudinary.com/ddei3mzex/video/upload/v1729067344/Video_Editing_Motion_Graphics_Roadmap_vjgnir.mp4"
+                  src="https://res.cloudinary.com/ddei3mzex/video/upload/v1729846740/Premiere_pro_showreel_dqi6sx.mp4"
                 ></video>
               </div>
             </div>

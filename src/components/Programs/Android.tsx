@@ -180,7 +180,7 @@ const Android: React.FC = () => {
                 <li>Publishing Apps on Google Play Store</li>
               </ul>
               <div className="relative w-full h-0 pb-56">
-                <video className="absolute top-0 left-0 w-full h-full border-4 border-gray-300" controls src="https://www.w3schools.com/html/mov_bbb.mp4">
+                <video className="absolute top-0 left-0 w-full h-full border-4 border-gray-300" controls src="https://res.cloudinary.com/ddei3mzex/video/upload/v1729846341/Introduction_to_Android_Studio_annmmc.mp4">
                 </video>
               </div>
             </div>
