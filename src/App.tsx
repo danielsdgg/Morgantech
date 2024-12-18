@@ -15,6 +15,7 @@ import VideoEditing from './components/Programs/VideoEditing';
 import Computer from './components/Programs/Computer';
 import Android from './components/Programs/Android';
 import Webdesign from './components/Programs/Webdesign';
+import Portal from './components/Portal';
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path='/computerpackages' element={<Computer/>} />
           <Route path='/android' element={<Android/>} />
           <Route path='/webdesign' element={<Webdesign/>} />
+          <Route path='/portal' element={<Portal/>} />
 
           <Route path='/form' element={<Forms/>} />
 

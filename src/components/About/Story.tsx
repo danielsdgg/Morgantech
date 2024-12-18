@@ -97,16 +97,19 @@ const Story: React.FC = () => {
             <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
             {/* Text Content */}
             <div className="relative z-10 p-6 sm:p-8 text-white">
-                <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">The Morgan Technical Story</h2>
-                <p className="text-base sm:text-lg mb-4">
-                At Morgan-Technical-Training, our journey began with a simple mission: to empower individuals & organizations with cutting-edge tech solutions. Founded by a team of passionate experts, we envisioned a company that not only safeguards digital assets but also fosters a culture of security awareness.
-                </p>
-                <p className="text-base sm:text-lg mb-4">
-                Over the years, Morgan Technical has grown into a trusted partner for businesses. Our commitment to innovation and excellence drives us to continuously enhance our services, ensuring that we stay up-to-date with trending technologies.
-                </p>
-                <p className="text-base sm:text-lg">
-                  We believe that cybersecurity is more than just technology; it's about people, processes, and a proactive mindset.
-                </p>
+              <h2 className="text-3xl sm:text-4xl font-bold mb-4 sm:mb-6">The Morgan Technical Journey</h2>
+              <p className="text-base sm:text-lg mb-4">
+                  At Morgan Technical Training, our story begins with a bold vision: to transform lives through the power of technology. Driven by a passion for innovation and learning, we set out to create a training institution that bridges the gap between ambition and opportunity, equipping individuals with the skills to thrive in today’s fast-evolving tech landscape.
+              </p>
+              <p className="text-base sm:text-lg mb-4">
+                  Founded by industry experts who understand the pulse of technology, Morgan Technical Training was born out of the belief that education is the foundation of success. From humble beginnings, we have grown into a hub of excellence, offering courses designed to inspire creativity, instill confidence, and unlock potential.
+              </p>
+              <p className="text-base sm:text-lg mb-4">
+                  At the heart of Morgan Technical Training is a relentless commitment to our students. We don’t just teach technology; we ignite curiosity, nurture innovation, and prepare our learners to tackle real-world challenges. Whether it’s mastering coding, exploring cybersecurity, or diving into data science, we empower you to turn aspirations into achievements.
+              </p>
+              <p className="text-base sm:text-lg">
+                  Join us at Morgan Technical Training, where your journey into the world of technology begins. Together, let’s build a future powered by knowledge, driven by skill, and defined by success.
+              </p>
             </div>
             </div>
         </div>
