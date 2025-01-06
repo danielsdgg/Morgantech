@@ -16,6 +16,8 @@ import Computer from './components/Programs/Computer';
 import Android from './components/Programs/Android';
 import Webdesign from './components/Programs/Webdesign';
 import Portal from './components/Portal';
+import Blogs from './components/Blogs';
+import BlogDetails from './components/BlogDetails';
 
 function App() {
   return (
@@ -37,6 +39,11 @@ function App() {
           <Route path='/android' element={<Android/>} />
           <Route path='/webdesign' element={<Webdesign/>} />
           <Route path='/portal' element={<Portal/>} />
+          {/* Main blogs page */}
+          <Route path='/blogs' element={<Blogs />} />
+
+          {/* Blog details page */}
+          <Route path="/blog/:id" element={<BlogDetails />} />
 
           <Route path='/form' element={<Forms/>} />
 

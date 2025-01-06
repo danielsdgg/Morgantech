@@ -86,7 +86,7 @@ const Team = () => {
                 <img src="https://res.cloudinary.com/ddei3mzex/image/upload/v1712911719/1690452513365_gaum2x.jpg" className="mx-auto w-48 h-48 rounded-full mb-6" alt="Daniel Muiruri" />
                 <h3 className="text-xl font-semibold">DANIEL MUIRURI</h3>
                 <div className="mb-4">
-                  <p className="text-gray-600">Software Engineer</p>
+                  <p className="text-gray-600">Lead Software Engineer</p>
                 </div>
                 <p className="text-black">Daniel is our lead developer who specializes in creating software for clients ranging from individuals and small businesses all the way to large enterprise corporations.</p>
                 <ul className="flex justify-center mt-6">

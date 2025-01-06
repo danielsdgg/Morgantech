@@ -63,6 +63,13 @@ const NavBar = () => {
             </ul>
           </li>
 
+          {/* blogs */}
+          <li>
+            <Link to={'/blogs'}><p className="py-2 px-4 text-white hover:text-orange-400">
+              Blogs
+            </p> </Link>
+          </li>
+
           {/* Programs Dropdown */}
           <li className="relative group">
             <p className="py-2 px-4 text-white hover:text-orange-400 flex items-center">
