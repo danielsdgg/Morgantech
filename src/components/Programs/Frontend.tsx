@@ -229,14 +229,13 @@ const Frontend: React.FC = () => {
         </section>
 
         {/* Course duration & payment */}
-
         <section className="py-16 bg-gradient-to-r from-gray-100 to-gray-300">
           <div className="container mx-auto px-6 lg:px-12 text-center space-y-16">
             {/* Course Duration */}
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Course Duration</h2>
               <p className="text-lg md:text-xl text-gray-700">
-                Our Frontend Programming Bootcamp spans 20 weeks of intensive, hands-on training,
+                Our Frontend Programming Bootcamp spans 25 weeks of intensive, hands-on training,
                 preparing you to thrive in the tech industry.
               </p>
             </div>
@@ -387,15 +386,10 @@ const Frontend: React.FC = () => {
       disabled
     >
       <option value="">Select a course</option>
-      <option value="Web-design">Web-design</option>
+      <option value="Data Science">Data Science</option>
       <option value="Cyber Security">Cyber Security</option>
       <option value="Frontend Programming">Frontend Programming</option>
       <option value="Backend Programming">Backend Programming</option>
-      <option value="Graphics Design">Graphics Design</option>
-      <option value="Accounting Packages">Accounting Packages</option>
-      <option value="Video editing/Motion graphics">Video editing/Motion graphics</option>
-      <option value="Android Programming">Android Programming</option>
-      <option value="Computer Packages">Computer Packages</option>
     </select>
   </div>
 

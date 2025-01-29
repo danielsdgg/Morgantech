@@ -118,15 +118,10 @@ const Forms = () => {
                   className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-600"
                   required>
                   <option value="">Select a course</option>
-                  <option value="Web-design">Web-design</option>
+                  <option value="Data Science">Data Science</option>
                   <option value="Cyber Security">Cyber Security</option>
                   <option value="Frontend Programming">Frontend Programming</option>
                   <option value="Backend Programming">Backend Programming</option>
-                  <option value="Graphics Design">Graphics Design</option>
-                  <option value="Accounting Packages">Accounting Packages</option>
-                  <option value="Video editing/Motion graphics">Video editing/Motion graphics</option>
-                  <option value="Android Programming">Android Programming</option>
-                  <option value="Computer Packages">Computer Packages</option>
                 </select>
               </div>
 

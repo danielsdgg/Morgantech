@@ -77,31 +77,6 @@ const NavBar = () => {
             {/* Dropdown Menu */}
             <ul className="absolute w-[250px] left-0 top-full mt-0 hidden group-hover:block bg-white shadow-md">
               <li>
-                <Link to={'/webdesign'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
-                  Web Design
-                </p></Link>
-              </li>
-              <li>
-                <Link to={'/accounts'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
-                  Accounting Packages
-                </p></Link>
-              </li>
-              <li>
-                <Link to={'/videoediting'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
-                  Video Editing/Motion Graphics
-                </p></Link>
-              </li>
-              <li>
-                <Link to={'/graphics'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
-                  Graphics Design Packages
-                </p></Link>
-              </li>
-              <li>
-                <Link to={'/computerpackages'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
-                  Computer Packages
-                </p></Link>
-              </li>
-              <li>
               <Link to={'/frontend'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
                   Frontend Programming
                 </p> </Link>
@@ -117,8 +92,8 @@ const NavBar = () => {
                 </p></Link>
               </li>
               <li>
-                <Link to={'/android'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
-                  Android Programming
+                <Link to={'/datascience'}><p className="block px-4 py-2 text-gray-800 hover:bg-gray-200">
+                  Data Science
                 </p></Link>
               </li>
             </ul>
@@ -211,31 +186,6 @@ const NavBar = () => {
               {activeSubMenu === 'programs' && (
                 <ul className="mt-2 ml-4">
                   <li>
-                    <Link to={'/webdesign'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
-                      Web Design
-                    </p></Link>
-                  </li> <hr></hr>
-                  <li>
-                    <Link to={'/accounts'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
-                      Accounting Packages
-                    </p></Link>
-                  </li> <hr></hr>
-                  <li>
-                    <Link to={'/videoediting'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
-                      Video Editing/Motion Graphics
-                    </p></Link>
-                  </li> <hr></hr>
-                  <li>
-                  <Link to={'/graphics'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
-                      Graphics Design Packages
-                    </p></Link>
-                  </li> <hr></hr>
-                  <li>
-                    <Link to={'/computerpackages'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
-                      Computer Packages
-                    </p></Link>
-                  </li> <hr></hr>
-                  <li>
                     <Link to={'/frontend'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
                       Frontend Programming
                     </p></Link>
@@ -251,10 +201,10 @@ const NavBar = () => {
                     </p></Link>
                   </li> <hr></hr>
                   <li>
-                    <Link to={'/android'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
-                      Android Programming
+                    <Link to={'/datascience'}><p className="block py-2 px-4 text-gray-300 hover:bg-gray-600 rounded">
+                      Data Science
                     </p></Link>
-                  </li>
+                  </li> <hr></hr>
                 </ul>
               )}
             </li>
