@@ -120,7 +120,7 @@ const Cyber:React.FC = () => {
 
         {/* ongoing intake */}
         <div className='w-full bg-blue-900 text-orange-400 py-16 px-4 text-center md:text-3xl sm:text-2xl text-1xl'>
-            <p>Applications ongoing for the <b>November 6th 2024</b> intake</p>
+        <p>This Course is fully remote and applications are ongoing for the <b>March 2025</b> intake</p>
         </div>
 
         {/* What to Expect */}
@@ -207,12 +207,12 @@ const Cyber:React.FC = () => {
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Full Payment</h3>
                   <p className="text-gray-600 mb-4">Pay upfront and enjoy a 10% discount.</p>
-                  <p className="text-3xl font-bold text-gray-800">KSH 60,000</p>
+                  <p className="text-3xl font-bold text-gray-800">KSH 160,000</p>
                 </div>
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Installment Plan</h3>
                   <p className="text-gray-600 mb-4">Pay in 3 easy installments during the course period.</p>
-                  <p className="text-3xl font-bold text-gray-800">KSH 65,000</p>
+                  <p className="text-3xl font-bold text-gray-800">KSH 165,000</p>
                 </div>
                 <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
                   <h3 className="text-2xl font-semibold mb-4 text-blue-600">Scholarships</h3>

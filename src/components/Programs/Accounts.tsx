@@ -122,7 +122,7 @@ const Accounts: React.FC = () => {
         {/* Ongoing Intake */}
         <div className="w-full bg-blue-900 text-orange-400 py-16 px-4 text-center md:text-3xl sm:text-2xl text-1xl">
           <p>
-            Applications ongoing for the <b>November 6th 2024</b> intake
+            Applications ongoing for the <b>April 2025</b> intake
           </p>
         </div>
 

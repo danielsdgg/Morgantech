@@ -123,7 +123,7 @@ const Webdesign: React.FC = () => {
 
         {/* ongoing intake */}
         <div className="w-full bg-blue-900 text-orange-400 py-16 px-4 text-center md:text-3xl sm:text-2xl text-1xl">
-          <p>Applications ongoing for the <b>November 6th 2024</b> intake</p>
+          <p>Applications ongoing for the <b>March 2025</b> intake</p>
         </div>
 
         {/* What to Expect */}
