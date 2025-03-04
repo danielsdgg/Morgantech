@@ -13,6 +13,7 @@ import Portal from './components/Portal';
 import Blogs from './components/Blogs';
 import BlogDetails from './components/BlogDetails';
 import DataScience from './components/Programs/DataScience';
+import Software from './components/Programs/Software';
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
           <Route path='/story' element={<Story/>} />
           <Route path='/team' element={<Team/>} />
           <Route path='/courses' element={<Courses/>} />
-          <Route path='/frontend' element={<Frontend/>} />
+          <Route path='/software' element={<Software/>} />
           <Route path='/backend' element={<Backend/>} />
           <Route path='/cyber' element={<Cyber/>} />
           <Route path='/datascience' element={<DataScience/>} />

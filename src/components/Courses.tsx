@@ -77,16 +77,24 @@ const Courses:React.FC = () => {
     <h2 className="text-4xl font-bold text-center mb-10 underline">Programs Available:</h2>
     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
       {/* Feature 1 */}
-      <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHOidFsuemGaWGxr16QKfvzI52EFQeFTrN4Q&s" alt="Feature 1" className="mx-auto mb-4 h-16" /> {/* Replace with your icon */}
-        <h3 className="text-xl font-semibold mb-2">Frontend Programming</h3>
-        <p className="text-gray-700">
-            A frontend developer is responsible for creating the visual and interactive aspects of a website or application. We train on languages like HTML, CSS, and JavaScript to build user interfaces, ensuring a seamless user experience. Their role includes collaborating with designers, optimizing performance, and ensuring compatibility across different devices and browsers.
-        </p> 
-        <Link to={'/frontend'}><p className="text-blue-500 hover:underline mt-4 block">
-          Learn More
-        </p></Link>
-      </div>
+      <div className="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHOidFsuemGaWGxr16QKfvzI52EFQeFTrN4Q&s"
+              alt="Software Engineering Icon"
+              className="mx-auto mb-4 h-16"
+            />
+            <h3 className="text-xl font-semibold mb-2 text-indigo-600">Software Engineering</h3>
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Software engineers design, develop, and maintain robust applications, mastering both frontend and backend technologies. 
+              Our course trains you in HTML, CSS, Tailwind CSS, JavaScript, React, Node.js, Python, Flask, and MySQL to build full-stack solutions. 
+              You'll learn to collaborate on projects, optimize performance, and deploy scalable systems across platforms.
+            </p>
+            <Link to={'/software'}>
+              <p className="text-indigo-600 hover:text-indigo-800 hover:underline mt-4 block font-medium transition-colors duration-300">
+                Learn More
+              </p>
+            </Link>
+            </div>
       
       {/* Feature 2 */}
       <div className="bg-white p-6 rounded-lg shadow-lg text-center">
