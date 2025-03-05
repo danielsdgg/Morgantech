@@ -215,53 +215,65 @@ const Home = () => {
     <section className="bg-gray-100 py-16 relative">
   <div className="container mx-auto px-4">
     <h2 className={`text-4xl font-bold text-center mb-10 underline duration-1000 ease-in ${
-            visible ? 'opacity-100' : 'opacity-0'
-          } delay-1600`}>Top Courses</h2>
+      visible ? 'opacity-100' : 'opacity-0'
+    } delay-1600`}>Top Courses</h2>
     <div className={`grid grid-cols-1 md:grid-cols-3 gap-8 transition-opacity duration-1000 ease-in ${
-            visible ? 'opacity-100' : 'opacity-0'
-          } delay-1600`}>
-      {/* Feature 1 */}
+      visible ? 'opacity-100' : 'opacity-0'
+    } delay-1600`}>
+      {/* Feature 1: Software Engineering */}
       <div className="bg-white p-6 rounded-lg shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHOidFsuemGaWGxr16QKfvzI52EFQeFTrN4Q&s"
-        alt="Software Engineering Icon"
-        className="mx-auto mb-4 h-16"
-      />
-      <h3 className="text-xl font-semibold mb-2 text-indigo-600">Software Engineering</h3>
-      <p className="text-gray-700 text-lg leading-relaxed">
-        Software engineers design, develop, and maintain robust applications, mastering both frontend and backend technologies. 
-        Our course trains you in HTML, CSS, Tailwind CSS, JavaScript, React, Node.js, Python, Flask, and MySQL to build full-stack solutions. 
-        You'll learn to collaborate on projects, optimize performance, and deploy scalable systems across platforms.
-      </p>
-      <Link to={'/software'}>
-        <p className="text-indigo-600 hover:text-indigo-800 hover:underline mt-4 block font-medium transition-colors duration-300">
-          Learn More
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHOidFsuemGaWGxr16QKfvzI52EFQeFTrN4Q&s"
+          alt="Software Engineering Icon"
+          className="mx-auto mb-4 h-16"
+        />
+        <h3 className="text-xl font-semibold mb-2 text-indigo-600">Software Engineering</h3>
+        <p className="text-gray-700 text-lg leading-relaxed">
+          Software engineers design, develop, and maintain robust applications, mastering both frontend and backend technologies. 
+          Our course trains you in HTML, CSS, Tailwind CSS, JavaScript, React, Node.js, Python, Flask, and MySQL to build full-stack solutions. 
+          You'll learn to collaborate on projects, optimize performance, and deploy scalable systems across platforms.
         </p>
-      </Link>
+        <Link to={'/software'}>
+          <p className="text-indigo-600 hover:text-indigo-800 hover:underline mt-4 block font-medium transition-colors duration-300">
+            Learn More
+          </p>
+        </Link>
       </div>
       
-      {/* Feature 2 */}
+      {/* Feature 2: Cybersecurity */}
       <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-        <img src="https://www.technologysolutions.net/wp-content/uploads/2023/09/pros-and-cons-scaled-2560x1280.jpeg" alt="Feature 2" className="mx-auto mb-4 h-16" /> {/* Replace with your icon */}
+        <img 
+          src="https://www.technologysolutions.net/wp-content/uploads/2023/09/pros-and-cons-scaled-2560x1280.jpeg" 
+          alt="Cybersecurity Icon" 
+          className="mx-auto mb-4 h-16" 
+        />
         <h3 className="text-xl font-semibold mb-2">Cyber Security</h3>
         <p className="text-gray-700">
-            Cybersecurity protects systems, networks, and data from cyber threats like attacks and breaches. It involves implementing security measures, monitoring for suspicious activity, and responding to incidents to ensure data integrity and confidentiality.
+          Cybersecurity protects systems, networks, and data from cyber threats like attacks and breaches. It involves implementing security measures, monitoring for suspicious activity, and responding to incidents to ensure data integrity and confidentiality.
         </p>
-        <Link to={'/cyber'}><p className="text-blue-500 hover:underline mt-4 block">
-          Learn More
-        </p></Link>
+        <Link to={'/cyber'}>
+          <p className="text-blue-500 hover:underline mt-4 block">
+            Learn More
+          </p>
+        </Link>
       </div>
 
-      {/* Feature 3 */}
+      {/* Feature 3: Data Science (New) */}
       <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-        <img src="https://img.freepik.com/free-photo/abstract-backdrop-with-curved-wave-pattern-design-generated-by-ai_188544-15570.jpg" alt="Feature 3" className="mx-auto mb-4 h-16 w-28" /> {/* Replace with your icon */}
-        <h3 className="text-xl font-semibold mb-2">Graphics Design</h3>
+        <img 
+          src="https://wallpapers.com/images/featured/data-science-xe1pmo7wm4jcokpd.jpg" 
+          alt="Data Science Icon" 
+          className="mx-auto mb-4 h-16" 
+        />
+        <h3 className="text-xl font-semibold mb-2">Data Science</h3>
         <p className="text-gray-700">
-            Graphic design involves creating visual content to communicate messages effectively through typography, imagery, and layout. Designers use software and creative techniques to produce graphics for various media, including print, digital, and advertising.
+          Data Science combines statistics, programming, and domain expertise to extract insights from data. Our course covers Python, R, machine learning, and big data tools like Hadoop, preparing you for roles in analytics and AI.
         </p>
-        <Link to={'/graphics'}><p className="text-blue-500 hover:underline mt-4 block">
-          Learn More
-        </p></Link>
+        <Link to={'/datascience'}>
+          <p className="text-blue-500 hover:underline mt-4 block">
+            Learn More
+          </p>
+        </Link>
       </div>
     </div>
   </div>
@@ -269,33 +281,59 @@ const Home = () => {
   {/* Right-faced arrow at bottom right */}
   <div className="absolute bottom-0 right-0 p-4">
     <NavLink to={'/courses'}>
-    <p className="text-1xl text-gray-700 hover:text-blue-500 cursor-pointer font-semibold flex items-center">
-      See More <span className="ml-2 text-3xl">&rarr;</span>
-    </p>
+      <p className="text-1xl text-gray-700 hover:text-blue-500 cursor-pointer font-semibold flex items-center">
+        See More <span className="ml-2 text-3xl">→</span>
+      </p>
     </NavLink>
-    </div>
-
+  </div>
 </section>
 
 {/* part 4 */}
-<section className={`py-12 bg-gray-200 duration-1000 ease-in ${
-            visible ? 'opacity-100' : 'opacity-0'
-          } delay-1600`}>
-      <div className="container mx-auto px-4">
-        {/* Heading */}
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Embrace the digital world</h2>
+<section className={`py-16 bg-gray-200 from-blue-500 via-indigo-600 to-purple-700 text-black duration-1000 ease-in ${
+    visible ? 'opacity-100' : 'opacity-0'
+  } delay-1600`}>
+  <div className="container mx-auto px-4 text-center">
+    {/* Heading */}
+    <h2 className="text-4xl md:text-5xl font-bold mb-6">Unlock Your Tech Potential</h2>
+    <p className="text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+      Explore cutting-edge courses in Software Engineering, Cybersecurity, and Data Science—designed for the future, delivered remotely.
+    </p>
 
-        {/* Video Container */}
-        <div className="relative w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg">
-          {/* Adjust aspect ratio for different screen sizes */}
-          <div className="relative pb-[56.25%] sm:pb-[65%] lg:pb-[28.125%]">
-            <video className="absolute top-0 left-0 w-full h-full border-4 border-gray-400" controls
-            src="https://res.cloudinary.com/ddei3mzex/video/upload/v1729160992/Digital_globe_fw3twx.mp4"
-            ></video>
-          </div>
-        </div>
+    {/* Highlights Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      {/* Software Engineering */}
+      <div className="bg-white text-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <h3 className="text-xl font-semibold mb-3 text-indigo-600">Software Engineering</h3>
+        <p className="text-md">
+          Master full-stack development with hands-on projects in React, Node.js, Python, and more. Build real-world solutions remotely.
+        </p>
       </div>
-    </section>
+
+      {/* Cybersecurity */}
+      <div className="bg-white text-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <h3 className="text-xl font-semibold mb-3 text-indigo-600">Cybersecurity</h3>
+        <p className="text-md">
+          Learn to secure networks and data with expert-led training. Remote labs and real-time simulations included.
+        </p>
+      </div>
+
+      {/* Data Science */}
+      <div className="bg-white text-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300">
+        <h3 className="text-xl font-semibold mb-3 text-indigo-600">Data Science</h3>
+        <p className="text-md">
+          Dive into data analysis, machine learning, and AI with flexible, remote coursework tailored to industry needs.
+        </p>
+      </div>
+    </div>
+
+    {/* Call to Action */}
+    <Link to="/courses">
+      <p className="inline-block bg-white text-indigo-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-100 transition-colors duration-300">
+        Discover Our Curriculum Now
+      </p>
+    </Link>
+  </div>
+</section>
 
     <ScrollButton/>
     </div>

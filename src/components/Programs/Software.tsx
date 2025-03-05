@@ -4,6 +4,18 @@ import Footer from '../Footer';
 import emailjs from 'emailjs-com'; // Import EmailJS
 import ScrollButton from '../ScrollButton';
 import { FaArrowDown } from 'react-icons/fa';
+// logos
+import HTML from '../../assets/html.png';
+import CSS from '../../assets/CSS.png';
+import JavaScript from '../../assets/JavaScript.png';
+import ReactImg from '../../assets/images.png';
+import Node from '../../assets/nodejs.jpg';
+import GitHub from '../../assets/github.png';
+import Tailwind from '../../assets/tailwind.png';
+import Flask from '../../assets/flask.png';
+import Type from '../../assets/type.png';
+import Python from '../../assets/python-programming-language.webp'
+
 
 const Software: React.FC = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -168,28 +180,57 @@ const Software: React.FC = () => {
         </section>
 
         {/* Technologies Covered */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-semibold text-indigo-600 mb-8">Technologies You'll Master</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                "HTML",
-                "CSS",
-                "Tailwind CSS",
-                "JavaScript",
-                "React",
-                "Node.js",
-                "Python",
-                "Flask",
-                "SQLite"
-              ].map((tech, index) => (
-                <div key={index} className="bg-white p-4 rounded-lg shadow-md">
-                  <p className="text-lg font-medium text-gray-800">{tech}</p>
-                </div>
-              ))}
-            </div>
+        <div className="w-full min-h-screen bg-gray-200 from-blue-500 via-purple-200 to-blue-500 text-gray-300 py-16">
+      {/* Container */}
+      <div className="max-w-[1200px] mx-auto p-6 flex flex-col justify-center w-full h-full">
+        {/* Heading */}
+        <div className="text-center mb-12">
+        <h2 className="text-4xl font-semibold text-indigo-600 mb-8">Technologies covered</h2>
+          <p className="py-4 text-xl text-black">These are the technologies you'll cover when studying the program</p>
+        </div>
+
+        {/* Skills Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-8 text-center">
+          {/* Skill Item */}
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={HTML} alt="HTML icon" />
+            <p className="mt-4 text-lg font-semibold">HTML</p>
           </div>
-        </section>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={CSS} alt="CSS icon" />
+            <p className="mt-4 text-lg font-semibold">CSS</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={JavaScript} alt="JavaScript icon" />
+            <p className="mt-4 text-lg font-semibold">JavaScript</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={ReactImg} alt="React icon" />
+            <p className="mt-4 text-lg font-semibold">React</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={Node} alt="Node.js icon" />
+            <p className="mt-4 text-lg font-semibold">Node</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={Flask} alt="Flask icon" />
+            <p className="mt-4 text-lg font-semibold">Flask</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={Tailwind} alt="TailwindCSS icon" />
+            <p className="mt-4 text-lg font-semibold">TailwindCSS</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={GitHub} alt="GitHub icon" />
+            <p className="mt-4 text-lg font-semibold">GitHub</p>
+          </div>
+          <div className="group shadow-lg hover:scale-110 duration-300 transform hover:translate-y-2 p-6 rounded-xl bg-[#112240] hover:bg-blue-500">
+            <img className="w-24 mx-auto group-hover:opacity-80" src={Python} alt="GitHub icon" />
+            <p className="mt-4 text-lg font-semibold">Python</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
         {/* Course Requirements */}
         <div className="w-full bg-gray-100 py-16 px-4 sm:px-16">
@@ -225,7 +266,7 @@ const Software: React.FC = () => {
                 <li>Frontend Development: HTML5, CSS3, Tailwind CSS</li>
                 <li>JavaScript (ES6+), node and React.js Fundamentals</li>
                 <li>Backend Development: Python, Flask</li>
-                <li>Database Management: MySQL</li>
+                <li>Database Management: SQLite3</li>
                 <li>Building Full-Stack Applications</li>
                 <li>API Development and Integration</li>
                 <li>Version Control with Git</li>

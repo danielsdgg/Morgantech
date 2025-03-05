@@ -119,18 +119,6 @@ const Courses:React.FC = () => {
           Learn More
         </p></Link>
       </div>
-
-      {/* Feature 4 */}
-      <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-        <img src="https://img.freepik.com/free-photo/cyber-security-expert-working-with-technology-neon-lights_23-2151645607.jpg?size=626&ext=jpg&ga=GA1.1.1880011253.1728950400&semt=ais_hybrid-rr-similar" alt="Feature 1" className="mx-auto mb-4 h-16" /> {/* Replace with your icon */}
-        <h3 className="text-xl font-semibold mb-2">Backend Programming</h3>
-        <p className="text-gray-700">
-          The Backend Programming Course focuses on building the server-side logic that powers web applications, enabling seamless data processing and management. Students will learn essential languages and frameworks like Python, Node.js, and SQL to handle databases, APIs, and server configurations. This course is ideal for those looking to develop secure, scalable, and efficient backend systems that communicate with the frontend and manage user data, ensuring smooth functionality across web platforms.
-        </p>
-        <Link to={'/backend'}><p className="text-blue-500 hover:underline mt-4 block">
-          Learn More
-        </p></Link>
-      </div>
     </div>
   </div>
 </section>
