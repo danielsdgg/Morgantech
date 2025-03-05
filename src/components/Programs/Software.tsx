@@ -13,7 +13,6 @@ import Node from '../../assets/nodejs.jpg';
 import GitHub from '../../assets/github.png';
 import Tailwind from '../../assets/tailwind.png';
 import Flask from '../../assets/flask.png';
-import Type from '../../assets/type.png';
 import Python from '../../assets/python-programming-language.webp'
 
 
