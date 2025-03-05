@@ -5,8 +5,6 @@ import Team from './components/About/Team';
 import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
 import Contact from './components/Contact';
 import Courses from './components/Courses';
-import Frontend from './components/Programs/Frontend';
-import Backend from './components/Programs/Backend';
 import Cyber from './components/Programs/Cyber';
 import Forms from './components/Forms';
 import Portal from './components/Portal';
@@ -26,7 +24,6 @@ function App() {
           <Route path='/team' element={<Team/>} />
           <Route path='/courses' element={<Courses/>} />
           <Route path='/software' element={<Software/>} />
-          <Route path='/backend' element={<Backend/>} />
           <Route path='/cyber' element={<Cyber/>} />
           <Route path='/datascience' element={<DataScience/>} />
           <Route path='/portal' element={<Portal/>} />
