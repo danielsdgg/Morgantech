@@ -120,8 +120,7 @@ const Forms = () => {
                   <option value="">Select a course</option>
                   <option value="Data Science">Data Science</option>
                   <option value="Cyber Security">Cyber Security</option>
-                  <option value="Frontend Programming">Frontend Programming</option>
-                  <option value="Backend Programming">Backend Programming</option>
+                  <option value="Software Engineering">Software Engineering</option>
                 </select>
               </div>
 

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import NavBar from '../Navbar';
 import Footer from '../Footer';
-import emailjs from 'emailjs-com'; // Import EmailJS
 import ScrollButton from '../ScrollButton';
 import { FaArrowDown } from 'react-icons/fa';
 // logos
@@ -22,19 +21,13 @@ const Software: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
-    
     window.addEventListener('scroll', handleScroll);
-    
-    // Set visible to true after the component mounts
     setVisible(true);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [notification, setNotification] = useState<string | null>(null); // State for notification
+  const [notification, setNotification] = useState<string | null>(null);
 
   const [formData, setFormData] = useState({
     fullName: '',
@@ -46,9 +39,7 @@ const Software: React.FC = () => {
     feedback: ''
   });
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
+  const openModal = () => setIsModalOpen(true);
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -60,7 +51,7 @@ const Software: React.FC = () => {
       highschool: '',
       course: 'Software Engineering',
       feedback: ''
-    }); // Reset form data when closing the modal
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -68,36 +59,46 @@ const Software: React.FC = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const sendEmail = (e: React.FormEvent) => {
-    e.preventDefault(); // Prevent default form submission
+  const sendEmail = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-    emailjs.send('service_7x3k6fq', 'template_fsx0o17', formData, 'hC6uNYFa9xlw96bvG')
-      .then(() => {
-        setNotification('Your application was submitted successfully!'); // Show success notification
-        setFormData({
-          fullName: '',
-          email: '',
-          phone: '',
-          gender: '',
-          highschool: '',
-          course: 'Software Engineering',
-          feedback: ''
-        });
-
-        // Hide the notification after 5 seconds
-        setTimeout(() => {
-          setNotification(null);
-        }, 5000);
-      })
-      .catch((error) => {
-        setNotification('Failed to send application. Please try again later.');
-        console.error('EmailJS error:', error);
-
-        // Hide the notification after 5 seconds
-        setTimeout(() => {
-          setNotification(null);
-        }, 5000);
+    try {
+      const response = await fetch('https://formcarry.com/s/-49z_wo5br3', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          fullName: formData.fullName,
+          email: formData.email,
+          phone: formData.phone,
+          gender: formData.gender,
+          highschool: formData.highschool,
+          course: formData.course,
+          feedback: formData.feedback,
+        }),
       });
+
+      if (!response.ok) throw new Error('Failed to submit form');
+
+      setNotification('Your application was submitted successfully!');
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        gender: '',
+        highschool: '',
+        course: 'Software Engineering',
+        feedback: ''
+      });
+
+      setTimeout(() => setNotification(null), 5000);
+    } catch (error) {
+      console.error('Formcarry error:', error);
+      setNotification('Failed to send application. Please try again later.');
+      setTimeout(() => setNotification(null), 5000);
+    }
   };
 
   return (

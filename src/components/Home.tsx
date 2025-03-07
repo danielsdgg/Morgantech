@@ -53,20 +53,20 @@ const Home = () => {
         {
           image: "https://res.cloudinary.com/ddei3mzex/image/upload/v1728998699/IMG_5230_qib0qp.jpg",
           name: "Nathan Nyongesa",
-          title: "Student",
+          title: "Mentor",
           testimonial: "Working with Morgan Technical has been significantly more effective in upscaling my skills by training newbie techies."
         },
         {
           image: 'https://res.cloudinary.com/ddei3mzex/image/upload/v1712911719/1690452513365_gaum2x.jpg',
           name: 'Daniel.M',
-          title: 'M.T.T. Alumni',
+          title: 'Team Lead',
           testimonial: 'I always wanted to be a frontend developer for a long time and after going through the technical training at M.T.T, I fulfilled my longtime wish.',
         },
         {
           image: 'https://science.nasa.gov/wp-content/uploads/2024/01/preview-supermoons.jpg?w=4096&format=jpeg',
-          name: 'Leonard Kuria',
-          title: 'Team Lead',
-          testimonial: 'Working at M.T.T has been fruitful indeed. we have managed to train 100+ software developers in 2024 alone!.',
+          name: 'Martin',
+          title: 'M.T.T. Alumni',
+          testimonial: 'Studying at M.T.T has been fruitful indeed and i have gained big skills.!',
         },
     
       ]

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 
 const Contact: React.FC = () => {
@@ -11,39 +10,49 @@ const Contact: React.FC = () => {
     message: '',
   });
 
-  const [notification, setNotification] = useState<string | null>(null); // State for notification
+  const [notification, setNotification] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const sendEmail = (e: React.FormEvent) => {
-    e.preventDefault(); // Prevent default form submission
+  const sendEmail = async (e: React.FormEvent) => {
+    e.preventDefault();
 
-    emailjs.send('service_7x3k6fq', 'template_fsx0o17', formData, 'hC6uNYFa9xlw96bvG')
-      .then(() => {
-        setNotification('Your message was received successfully!'); // Show success notification
-        setFormData({
-          name: '',
-          email: '',
-          message: '',
-        });
-
-        // Hide the notification after 5 seconds
-        setTimeout(() => {
-          setNotification(null);
-        }, 5000);
-      })
-      .catch((error) => {
-        setNotification('Failed to send message. Please try again later.');
-        console.error('EmailJS error:', error);
-
-        // Hide the notification after 5 seconds
-        setTimeout(() => {
-          setNotification(null);
-        }, 5000);
+    try {
+      const response = await fetch('https://formcarry.com/s/-49z_wo5br3', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
       });
+
+      if (!response.ok) throw new Error('Failed to submit form');
+
+      setNotification('Your message was received successfully!');
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+
+      setTimeout(() => {
+        setNotification(null);
+      }, 5000);
+    } catch (error) {
+      console.error('Formcarry error:', error);
+      setNotification('Failed to send message. Please try again later.');
+      setTimeout(() => {
+        setNotification(null);
+      }, 5000);
+    }
   };
 
   return (
@@ -54,9 +63,9 @@ const Contact: React.FC = () => {
           {/* Image Section */}
           <motion.div
             className="flex justify-center items-center"
-            initial={{ opacity: 0, x: -50 }} // Initial state
-            animate={{ opacity: 1, x: 0 }} // Final state
-            transition={{ duration: 0.5 }} // Animation duration
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <img
               className="w-[800px] h-[500px] rounded-3xl shadow-lg"
@@ -68,9 +77,9 @@ const Contact: React.FC = () => {
           {/* Form Section */}
           <motion.div
             className="flex justify-center items-center"
-            initial={{ opacity: 0, x: 50 }} // Initial state
-            animate={{ opacity: 1, x: 0 }} // Final state
-            transition={{ duration: 0.5 }} // Animation duration
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <form onSubmit={sendEmail} className="w-full bg-white p-8 rounded-lg shadow-lg">
               <div className="pb-8 text-center">
@@ -100,6 +109,7 @@ const Contact: React.FC = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
+                  required
                 />
               </div>
 
@@ -112,6 +122,7 @@ const Contact: React.FC = () => {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
+                  required
                 />
               </div>
 
@@ -124,6 +135,7 @@ const Contact: React.FC = () => {
                   rows={4}
                   value={formData.message}
                   onChange={handleChange}
+                  required
                 ></textarea>
               </div>
 
@@ -136,7 +148,6 @@ const Contact: React.FC = () => {
           </motion.div>
         </div>
       </div>
-
       <Footer />
     </>
   );
